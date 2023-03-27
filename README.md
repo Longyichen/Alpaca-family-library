@@ -31,11 +31,20 @@ The current Alpaca model is fine-tuned from a 7B LLaMA model [1] on 52K instruct
 Some applications:
 
 - Cleaned Alpaca Dataset：https://github.com/gururise/AlpacaDataCleaned
+
   - This repository hosts a cleaned and curated version of a dataset used to train the Alpaca LLM (Large Language Model). The original dataset had several issues that are addressed in this cleaned version.
+
 - Serge - LLaMa made easy 🦙: https://github.com/nsarrazin/serge
+
   - A chat interface based on `llama.cpp` for running Alpaca models. Entirely self-hosted, no API keys needed. Fits on 4GB of RAM and runs on the CPU.
+
 - Run LLaMA (and Stanford-Alpaca) inference on Apple Silicon GPUs: https://github.com/jankais3r/LLaMA_MPS
+
 - Alpaca Chinese Finetune Dataset: https://github.com/carbonz0/alpaca-chinese-dataset
+
+- 🐫 self-hosted, Simple LLaMA/*alpaca* API & CLI written in go: [go-skynet/llama-cli](https://github.com/go-skynet/llama-cli)
+
+  
 
 ## Other models fine-tuned based on the Alpaca model.
 
@@ -160,9 +169,10 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 - Offers you a comprehensive toolset trading off cost and performance
 
 - Github Page: https://github.com/jerryjliu/llama_index
+
 - Community: [https://llamahub.ai](https://llamahub.ai/)
 
-
+  
 
 ### alpaca_chinese_dataset
 
