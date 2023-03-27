@@ -31,9 +31,10 @@ The current Alpaca model is fine-tuned from a 7B LLaMA model [1] on 52K instruct
 Some applications:
 
 - Cleaned Alpaca Dataset：https://github.com/gururise/AlpacaDataCleaned
+
   - This repository hosts a cleaned and curated version of a dataset used to train the Alpaca LLM (Large Language Model). The original dataset had several issues that are addressed in this cleaned version.
 
-# Cleaned Alpaca Dataset
+    
 
 ## Other models fine-tuned based on the Alpaca model.
 
@@ -56,6 +57,32 @@ Without hyperparameter tuning, the LoRA model produces outputs comparable to the
 Some applications:
 
 - Alpaca-LoRA as a Chatbot Service: https://github.com/deep-diver/Alpaca-LoRA-Serve
+
+
+
+### Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions
+
+Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `Web Demo`
+
+This is the repo for the Code Alpaca project, which aims to build and share an instruction-following LLaMA model for code generation. This repo is fully based on [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) ,and only changes the data used for training. Training approach is the same.
+
+- Github Page: https://github.com/sahil280114/codealpaca
+- Web Demo: https://code-alpaca-demo.vercel.app/
+
+
+
+### Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)
+
+Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `LoRA`
+
+This is the repository for the `Evolving Alpaca` project, which aims to extensively collect instruction-tuning datasets (especially the CoT datasets) and conduct an in-depth empirical study based on [LLaMA](https://arxiv.org/abs/2302.13971v1) model. `Evolving` is used to describe the continuous expansion of our instruction-tuning data collection, which will continuously enhance [Alpaca](https://github.com/tatsu-lab/stanford_alpaca)'s instruction-following capabilities.
+
+- Github Page: https://github.com/PhoebusSi/Alpaca-CoT
+- Web Demo: https://code-alpaca-demo.vercel.app/
+
+![Alpaca-CoT](./assets/Alpaca-CoT-2.jpg)
+
+
 
 ### 骆驼(Luotuo): Chinese-alpaca-lora
 
@@ -86,3 +113,20 @@ Benchmark
 
 
 
+## Other Chatgpt Reproduction Models
+
+### ChatGLM-6B
+
+Contains:   `Model Weight`, `Web Demo`
+
+- Github Page: https://github.com/THUDM/ChatGLM-6B
+- Blog: https://chatglm.cn/blog
+- Model: [Hugging Face Hub](https://huggingface.co/THUDM/chatglm-6b)
+
+ChatGLM-6B is an open-source, bilingual (Chinese and English) conversational language model based on the General Language Model (GLM) architecture with 6.2 billion parameters. With model quantization technology, users can deploy it locally on consumer-grade graphics cards (with a minimum of only 6GB VRAM at INT4 quantization level). ChatGLM-6B uses similar techniques to ChatGPT and has been optimized for Chinese question answering and dialogue. After training on approximately 1 trillion identifiers in both Chinese and English, combined with supervised fine-tuning, feedback self-help, human feedback reinforcement learning technologies, the 62 billion parameter ChatGLM-6B can generate responses that are quite consistent with human preferences.
+
+Some applications:
+
+- A cost-effective implementation plan for ChatGPT, based on Tsinghua's ChatGLM-6B + LoRA for finetuning: https://github.com/mymusise/ChatGLM-Tuning
+- *Chatglm* 6b finetuning and alpaca finetuning: https://github.com/ssbuild/chatglm_finetuning
+- A webui for ChatGLM made by THUDM.https://github.com/Akegarasu/ChatGLM-webui
