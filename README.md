@@ -31,10 +31,11 @@ The current Alpaca model is fine-tuned from a 7B LLaMA model [1] on 52K instruct
 Some applications:
 
 - Cleaned Alpaca Dataset：https://github.com/gururise/AlpacaDataCleaned
-
   - This repository hosts a cleaned and curated version of a dataset used to train the Alpaca LLM (Large Language Model). The original dataset had several issues that are addressed in this cleaned version.
-
-    
+- Serge - LLaMa made easy 🦙: https://github.com/nsarrazin/serge
+  - A chat interface based on `llama.cpp` for running Alpaca models. Entirely self-hosted, no API keys needed. Fits on 4GB of RAM and runs on the CPU.
+- Run LLaMA (and Stanford-Alpaca) inference on Apple Silicon GPUs: https://github.com/jankais3r/LLaMA_MPS
+- Alpaca Chinese Finetune Dataset: https://github.com/carbonz0/alpaca-chinese-dataset
 
 ## Other models fine-tuned based on the Alpaca model.
 
@@ -111,6 +112,17 @@ Benchmark
 
 <img src="./assets/KoAlpaca-20230327220706243.png" alt="KoAlpaca icon" style="zoom:33%;" />
 
+### Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案
+
+Contains:  `Dataset`, `Data Genrating Code`, `Finetune Code`, `Model Weight`, `LoRA`, `Benchmark`
+
+This is the repo for the Chinese-Vicuna project, which aims to build and share an instruction-following Chinese LLaMA model which can run on a single Nvidia RTX-2080TI, that why we named this project `Vicuna`, small but strong enough !
+
+- Github Page: https://github.com/Facico/Chinese-Vicuna
+- Model:  https://github.com/Facico/Chinese-Vicuna/tree/master/lora-Vicuna/checkpoint-final
+
+![camel](https://github.com/Facico/Chinese-Vicuna/raw/master/img/vicuna-llama.png)
+
 
 
 ## Other Chatgpt Reproduction Models
@@ -130,3 +142,35 @@ Some applications:
 - A cost-effective implementation plan for ChatGPT, based on Tsinghua's ChatGLM-6B + LoRA for finetuning: https://github.com/mymusise/ChatGLM-Tuning
 - *Chatglm* 6b finetuning and alpaca finetuning: https://github.com/ssbuild/chatglm_finetuning
 - A webui for ChatGLM made by THUDM.https://github.com/Akegarasu/ChatGLM-webui
+
+
+
+## Some Resources for Instruction Fine-tuning.
+
+### 🗂️ LlamaIndex 🦙 (GPT Index)
+
+LlamaIndex is a simple, flexible interface between your external data and LLMs. It provides the following tools in an easy-to-use fashion:
+
+- Offers **data connectors** to your existing data sources and data formats (API's, PDF's, docs, SQL, etc.)
+- Provides indices over your unstructured and structured data for use with LLM's. These indices help to abstract away common boilerplate and pain points for in-context learning:
+  - Storing context in an easy-to-access format for prompt insertion.
+  - Dealing with prompt limitations (e.g. 4096 tokens for Davinci) when context is too big.
+  - Dealing with text splitting.
+- Provides users an interface to **query** the index (feed in an input prompt) and obtain a knowledge-augmented output.
+- Offers you a comprehensive toolset trading off cost and performance
+
+- Github Page: https://github.com/jerryjliu/llama_index
+- Community: [https://llamahub.ai](https://llamahub.ai/)
+
+
+
+### alpaca_chinese_dataset
+
+人工精调的中文对话数据集和一段chatglm的微调代码
+
+当前的聊天对话模型数据集主要都是由英文构成，但是当前中文聊天模型构建的需求也较为迫切，因此我们将斯坦福的alpaca数据集进行中文翻译，并再制造一些对话数据，并开源提供。
+
+- Github Page: https://github.com/hikariming/alpaca_chinese_dataset
+
+
+
