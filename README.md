@@ -230,6 +230,21 @@ The goal of this project is to promote the development of the open-source commun
 - The model optimized based on BLOOMZ-7B1-mt: [BELLE-7B-0.2M](https://huggingface.co/BelleGroup/BELLE-7B-0.2M)，[BELLE-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-7B-0.6M)，[BELLE-7B-1M](https://huggingface.co/BelleGroup/BELLE-7B-1M)，[BELLE-7B-2M](https://huggingface.co/BelleGroup/BELLE-7B-2M)
 - The model optimized based on LLAMA: [BELLE-LLAMA-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-0.6M)，[BELLE-LLAMA-7B-2M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-2M)
 
+### ChatYuan: Large Language Model for Dialogue in Chinese and English
+
+Contains:   `Model Weight`, `Pretrain Code`,`Finetune Code`, `Web Demo`
+
+- Github Page: https://github.com/clue-ai/ChatYuan
+- Model: https://huggingface.co/ClueAI/ChatYuan-large-v2, https://modelscope.cn/models/ClueAI/ChatYuan-large-v2/summary
+- Web Demo: https://huggingface.co/spaces/ClueAI/ChatYuan-large-v2
+- Discord: https://discord.gg/hUVyMRByaE
+
+ChatYuan-large-v2是一个支持中英双语的功能型对话语言大模型。ChatYuan-large-v2使用了和 v1版本相同的技术方案，在微调数据、人类反馈强化学习、思维链等方面进行了优化。
+
+ChatYuan large v2 is an open-source large language model for dialogue, supports both Chinese and English languages, and in ChatGPT style.
+
+ChatYuan-large-v2是ChatYuan系列中以轻量化实现高质量效果的模型之一，用户可以在消费级显卡、 PC甚至手机上进行推理（INT4 最低只需 400M ）。
+
 
 
 ## Some Resources for Instruction Fine-tuning.
