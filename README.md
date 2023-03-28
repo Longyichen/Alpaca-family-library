@@ -163,6 +163,25 @@ This is the repo for the Chinese-Vicuna project, which aims to build and share a
 
 ![camel](https://github.com/Facico/Chinese-Vicuna/raw/master/img/vicuna-llama.png)
 
+### Chinese LLaMA & Alpaca 大模型
+
+Contains:  `Model Weight`, `LoRA`,
+
+为了促进大模型在中文NLP社区的开放研究，本项目开源了**中文LLaMA模型和经过指令精调的Alpaca大模型**。这些模型在原版LLaMA的基础上扩充了中文词表并使用了中文数据进行二次预训练，进一步提升了中文基础语义理解能力。同时，在中文LLaMA的基础上，本项目使用了中文指令数据进行指令精调，显著提升了模型对指令的理解和执行能力。
+
+- Github Page:https://github.com/ymcui/Chinese-LLaMA-Alpaca
+
+Note: The following models cannot be used directly and must be reconstructed following the steps provided in this project's [Model Reconstruction](https://github.com/ymcui/Chinese-LLaMA-Alpaca/blob/main/README_EN.md#Model-Reconstruction) section.
+
+| Model Name        | Type                        | Base Model Required for Reconstruction | Size[2] | LoRA Download Link                                           | SHA256[3]          |
+| ----------------- | --------------------------- | -------------------------------------- | ------- | ------------------------------------------------------------ | ------------------ |
+| Chinese-LLaMA-7B  | General                     | Original LLaMA-7B[1]                   | 770M    | [[Cloud Disk Link\]](https://pan.baidu.com/s/1oORTdpr2TvlkxjpyWtb5Sw?pwd=33hb) （Password: 33hb） | 39b86b......fe0e60 |
+| Chinese-Alpaca-7B | Fine-tuned for Instructions | Original LLaMA-7B[1]                   | 790M    | [[Cloud Disk Link\]](https://pan.baidu.com/s/1xV1UXjh1EPrPtXg6WyG7XQ?pwd=923e) （Password：923e） | 9bb5b6......ce2d87 |
+
+![img](./assets/banner-20230328210540492.png)
+
+
+
 ### Japanese-Alpaca-LoRA
 
 Contains:  `Dataset`,  `Finetune Code`,  `LoRA`, 
