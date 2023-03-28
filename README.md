@@ -118,8 +118,7 @@ Benchmark
 - Github Page: https://github.com/Beomi/KoAlpaca
 - Telegram app: http://pf.kakao.com/_wdRxcxj
 - Model: https://huggingface.co/beomi/KoAlpaca-65B-LoRA
-
-<img src="./assets/KoAlpaca-20230327220706243.png" alt="KoAlpaca icon" style="zoom:33%;" />
+- 
 
 ### Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案
 
@@ -131,6 +130,14 @@ This is the repo for the Chinese-Vicuna project, which aims to build and share a
 - Model:  https://github.com/Facico/Chinese-Vicuna/tree/master/lora-Vicuna/checkpoint-final
 
 ![camel](https://github.com/Facico/Chinese-Vicuna/raw/master/img/vicuna-llama.png)
+
+### Japanese-Alpaca-LoRA
+
+Contains:  `Dataset`,  `Finetune Code`,  `LoRA`, 
+
+A Japanese finetuned instruction LLaMA.
+
+Github Page: https://github.com/masa3141/japanese-alpaca-lora
 
 
 
@@ -169,10 +176,30 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 - Offers you a comprehensive toolset trading off cost and performance
 
 - Github Page: https://github.com/jerryjliu/llama_index
-
 - Community: [https://llamahub.ai](https://llamahub.ai/)
 
-  
+
+
+### CodeGeeX: A Multilingual Code Generation Model
+
+Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
+
+CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
+
+- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
+- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
+- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
+- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
+
+- Github Page: https://github.com/THUDM/CodeGeeX 
+
+- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
+
+Some applications:
+
+- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
+
+
 
 ### alpaca_chinese_dataset
 
