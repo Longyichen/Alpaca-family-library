@@ -141,6 +141,21 @@ Github Page: https://github.com/masa3141/japanese-alpaca-lora
 
 
 
+### [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070)
+
+Contains:  `Dataset`,  `Finetune Code`, `Model Weight`,  `Web Demo`
+
+This work collected more than 700 diseases and their corresponding symptoms, recommended medications, and required medical tests, and then generated 5K doctor-patient conversations. By fine-tuning models of doctor-patient conversations, these models emerge with great potential to understand patients' needs, provide informed advice, and offer valuable assistance in a variety of medical-related fields. The integration of these advanced language models into healthcare can revolutionize the way healthcare professionals and patients communicate, ultimately improving the overall quality of care and patient outcomes.
+
+- Github Page: https://github.com/Kent0n-Li/ChatDoctor
+- Model: [link](https://forms.office.com/Pages/ResponsePage.aspx?id=lYZBnaxxMUy1ssGWyOw8ij06Cb8qnDJKvu2bVpV1-ANUMDIzWlU0QTUxN0YySFROQk9HMVU0N0xJNC4u)
+- Dataset: https://github.com/Kent0n-Li/ChatDoctor#data-and-model
+- WebDemo: https://huggingface.co/spaces/kenton-li/ChatDoctor
+
+<img src="./assets/logo-20230328095104966.png" alt="img" style="zoom:50%;" />
+
+
+
 ## Other Chatgpt Reproduction Models
 
 ### ChatGLM-6B
