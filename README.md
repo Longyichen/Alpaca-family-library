@@ -6,12 +6,12 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
 
 Contents：
 
-- What’s Alpaca
-- Alpaca model fine-tuned for application
-- Alpaca model fine-tuned for different languages
-- Other GPT3.5 Reproduction Models
-- Some Large Language Models
-- Some Resources for Instruction Fine-tuning
+- [What’s Alpaca](https://github.com/Longyichen/Alpaca-family-library#whats-alpaca)
+- [Alpaca model fine-tuned for application](https://github.com/Longyichen/Alpaca-family-library#alpaca-model-fine-tuned-for-application)
+- [Alpaca model fine-tuned for different languages](https://github.com/Longyichen/Alpaca-family-library#alpaca-model-fine-tuned-for-different-languages)
+- [Some Large Language Models](https://github.com/Longyichen/Alpaca-family-library#some-large-language-models)
+- [Other ChatGPT Reproduction Models](https://github.com/Longyichen/Alpaca-family-library#other-chatgpt-reproduction-models)
+- [Some Resources for Instruction Fine-tuning](https://github.com/Longyichen/Alpaca-family-library#some-large-language-models)
 
 
 
@@ -249,9 +249,14 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 - Github Page: https://github.com/jerryjliu/llama_index
 - Community: [https://llamahub.ai](https://llamahub.ai/)
 
+### LMFlow
 
+An extensible, convenient, and efficient toolbox for finetuning large machine learning models, designed to be user-friendly, speedy and reliable, and accessible to the entire community.
 
+![LMFlow-features](./assets/features.png)
 
+- Github Page: https://github.com/OptimalScale/LMFlow
+- Documentation: https://optimalscale.github.io/LMFlow/
 
 ### alpaca_chinese_dataset
 
@@ -261,5 +266,7 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 
 - Github Page: https://github.com/hikariming/alpaca_chinese_dataset
 
+## Contributors
 
+[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman)
 
