@@ -4,6 +4,17 @@ Summarize all low-cost replication methods for Chatgpt countiously. It is believ
 
 Welcome everyone to provide pull requests, and I will also regularly track the latest developments in this repository！
 
+Contents：
+
+- What’s Alpaca
+- Alpaca model fine-tuned for application
+- Alpaca model fine-tuned for different languages
+- Other GPT3.5 Reproduction Models
+- Some Large Language Models
+- Some Resources for Instruction Fine-tuning
+
+
+
 ## What’s Alpaca
 
 Contains:  `Dataset`,`Data Genrating Code`, `Finetune Code`, `Web Demo`, `Benchmark`
@@ -46,7 +57,7 @@ Some applications:
 
   
 
-## Other models fine-tuned based on the Alpaca model.
+## Alpaca model fine-tuned for application
 
 A series of fine-tuned models derived from the Alpaca model. Some of them have publicly available weights, are fine-tuned for specific domains, and have better performance. These types of models are still being continuously developed.
 
@@ -94,6 +105,24 @@ This is the repository for the `Evolving Alpaca` project, which aims to extensiv
 
 
 
+### [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070)
+
+Contains:  `Dataset`,  `Finetune Code`, `Model Weight`,  `Web Demo`
+
+This work collected more than 700 diseases and their corresponding symptoms, recommended medications, and required medical tests, and then generated 5K doctor-patient conversations. By fine-tuning models of doctor-patient conversations, these models emerge with great potential to understand patients' needs, provide informed advice, and offer valuable assistance in a variety of medical-related fields. The integration of these advanced language models into healthcare can revolutionize the way healthcare professionals and patients communicate, ultimately improving the overall quality of care and patient outcomes.
+
+- Github Page: https://github.com/Kent0n-Li/ChatDoctor
+- Model: [link](https://forms.office.com/Pages/ResponsePage.aspx?id=lYZBnaxxMUy1ssGWyOw8ij06Cb8qnDJKvu2bVpV1-ANUMDIzWlU0QTUxN0YySFROQk9HMVU0N0xJNC4u)
+- Dataset: https://github.com/Kent0n-Li/ChatDoctor#data-and-model
+- WebDemo: https://huggingface.co/spaces/kenton-li/ChatDoctor
+- Arixv: https://arxiv.org/abs/2303.14070
+
+<img src="./assets/logo-20230328095104966.png" alt="img" style="zoom:50%;" />
+
+
+
+## Alpaca model fine-tuned for different languages
+
 ### 骆驼(Luotuo): Chinese-alpaca-lora
 
 Contains: `Data Genrating Code`,  `Model Weight`, `LoRA`, `Benchmark`
@@ -116,9 +145,12 @@ The Korean Alpaca model is learned in the same way as the Stanford Alpaca model.
 Benchmark
 
 - Github Page: https://github.com/Beomi/KoAlpaca
+
 - Telegram app: http://pf.kakao.com/_wdRxcxj
+
 - Model: https://huggingface.co/beomi/KoAlpaca-65B-LoRA
-- 
+
+  
 
 ### Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案
 
@@ -141,20 +173,30 @@ Github Page: https://github.com/masa3141/japanese-alpaca-lora
 
 
 
-### [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070)
+## Some Large Language Models
 
-Contains:  `Dataset`,  `Finetune Code`, `Model Weight`,  `Web Demo`
+Large language models provide powerful foundational capabilities for generative models and are also the basis for model fine-tuning. It is difficult to define what scale of language model can be considered a large language model, as the size of the model's parameters is related to the industry's hardware level (computing power). The scale of large models continues to evolve, and definitions are changing. In addition to OpenAI's GPT series available through an interface, this article lists some other excellent downloadable model weights for commonly used large language models.
 
-This work collected more than 700 diseases and their corresponding symptoms, recommended medications, and required medical tests, and then generated 5K doctor-patient conversations. By fine-tuning models of doctor-patient conversations, these models emerge with great potential to understand patients' needs, provide informed advice, and offer valuable assistance in a variety of medical-related fields. The integration of these advanced language models into healthcare can revolutionize the way healthcare professionals and patients communicate, ultimately improving the overall quality of care and patient outcomes.
+Compared to the relatively closed usage of OpenAI's model, fine-tuning this type of language model is also a good choice.
 
-- Github Page: https://github.com/Kent0n-Li/ChatDoctor
-- Model: [link](https://forms.office.com/Pages/ResponsePage.aspx?id=lYZBnaxxMUy1ssGWyOw8ij06Cb8qnDJKvu2bVpV1-ANUMDIzWlU0QTUxN0YySFROQk9HMVU0N0xJNC4u)
-- Dataset: https://github.com/Kent0n-Li/ChatDoctor#data-and-model
-- WebDemo: https://huggingface.co/spaces/kenton-li/ChatDoctor
+### CodeGeeX: A Multilingual Code Generation Model
 
-<img src="./assets/logo-20230328095104966.png" alt="img" style="zoom:50%;" />
+Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
 
+CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
 
+- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
+- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
+- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
+- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
+
+- Github Page: https://github.com/THUDM/CodeGeeX 
+
+- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
+
+Some applications:
+
+- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
 
 ## Other Chatgpt Reproduction Models
 
@@ -173,6 +215,20 @@ Some applications:
 - A cost-effective implementation plan for ChatGPT, based on Tsinghua's ChatGLM-6B + LoRA for finetuning: https://github.com/mymusise/ChatGLM-Tuning
 - *Chatglm* 6b finetuning and alpaca finetuning: https://github.com/ssbuild/chatglm_finetuning
 - A webui for ChatGLM made by THUDM.https://github.com/Akegarasu/ChatGLM-webui
+
+### BELLE: BE Large Language model Engine
+
+Contains:   `Model Weight`, `Data Genrating Code`,`Dataset`
+
+- Github Page: https://github.com/LianjiaTech/BELLE
+- Model: https://huggingface.co/BelleGroup
+- Zhihu: https://zhuanlan.zhihu.com/p/616079388
+
+The goal of this project is to promote the development of the open-source community for Chinese language large-scale conversational models. This project optimizes Chinese performance in addition to original Alpaca. The model finetuning uses only data generated via ChatGPT (without other data).
+
+- Data Release: The Chinese dataset generated [1M](https://huggingface.co/datasets/BelleGroup/generated_train_1M_CN) + [0.5M](https://huggingface.co/datasets/BelleGroup/generated_train_0.5M_CN), using [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) as reference
+- The model optimized based on BLOOMZ-7B1-mt: [BELLE-7B-0.2M](https://huggingface.co/BelleGroup/BELLE-7B-0.2M)，[BELLE-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-7B-0.6M)，[BELLE-7B-1M](https://huggingface.co/BelleGroup/BELLE-7B-1M)，[BELLE-7B-2M](https://huggingface.co/BelleGroup/BELLE-7B-2M)
+- The model optimized based on LLAMA: [BELLE-LLAMA-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-0.6M)，[BELLE-LLAMA-7B-2M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-2M)
 
 
 
@@ -194,25 +250,6 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 - Community: [https://llamahub.ai](https://llamahub.ai/)
 
 
-
-### CodeGeeX: A Multilingual Code Generation Model
-
-Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
-
-CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
-
-- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
-- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
-- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
-- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
-
-- Github Page: https://github.com/THUDM/CodeGeeX 
-
-- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
-
-Some applications:
-
-- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
 
 
 
