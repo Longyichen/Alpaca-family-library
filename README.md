@@ -264,6 +264,17 @@ ChatYuan large v2 is an open-source large language model for dialogue, supports 
 
 ChatYuan-large-v2是ChatYuan系列中以轻量化实现高质量效果的模型之一，用户可以在消费级显卡、 PC甚至手机上进行推理（INT4 最低只需 400M ）。
 
+### GPT4All
+
+Contains:   `Model Weight`, `Dataset`,`LoRa`
+
+- Github Page: https://github.com/nomic-ai/gpt4all
+- Model: https://huggingface.co/nomic-ai/gpt4all-lora
+- Document: [Technical Report](https://s3.amazonaws.com/static.nomic.ai/gpt4all/2023_GPT4All_Technical_Report.pdf)
+- Discord: [Discord](https://discord.gg/kvmy6dQB)
+
+Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
+
 
 
 ## Some Resources for Instruction Fine-tuning.
@@ -292,6 +303,16 @@ An extensible, convenient, and efficient toolbox for finetuning large machine le
 - Github Page: https://github.com/OptimalScale/LMFlow
 - Documentation: https://optimalscale.github.io/LMFlow/
 
+### Colossal-AI
+
+The success of Transformer models has pushed the deep learning model scale to billions of parameters. Due to the limited memory resource of a single GPU, However, the best practice for choosing the optimal parallel strategy is still lacking, since it requires domain expertise in both deep learning and parallel computing.
+The Colossal-AI system addressed the above challenge by introducing a unified interface to scale your sequential code of model training to distributed environments. It supports parallel training methods such as data, pipeline, tensor, and sequence parallelism, as well as heterogeneous training methods integrated with zero redundancy optimizer. Compared to the baseline system, Colossal-AI can achieve up to 2.76 times training speedup on large-scale models.
+
+- Github Page: https://github.com/hpcaitech/ColossalAI
+
+- Arixv: [Paper ](https://arxiv.org/abs/2110.14883)
+- ChatColossal: https://medium.com/@yangyou_berkeley/colossalchat-an-open-source-solution-for-cloning-chatgpt-with-a-complete-rlhf-pipeline-5edf08fb538b
+
 ### alpaca_chinese_dataset
 
 人工精调的中文对话数据集和一段chatglm的微调代码
@@ -302,5 +323,5 @@ An extensible, convenient, and efficient toolbox for finetuning large machine le
 
 ## Contributors
 
-[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman)
+[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode)
 
