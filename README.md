@@ -234,6 +234,7 @@ Some applications:
 - A cost-effective implementation plan for ChatGPT, based on Tsinghua's ChatGLM-6B + LoRA for finetuning: https://github.com/mymusise/ChatGLM-Tuning
 - *Chatglm* 6b finetuning and alpaca finetuning: https://github.com/ssbuild/chatglm_finetuning
 - A webui for ChatGLM made by THUDM.https://github.com/Akegarasu/ChatGLM-webui
+- 图文生成版 Visual OpenLLM：https://github.com/visual-openllm/visual-openllm
 
 ### BELLE: BE Large Language model Engine
 
