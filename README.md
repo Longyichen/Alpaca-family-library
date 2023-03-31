@@ -217,6 +217,28 @@ Some applications:
 
 - OneFlow Code: https://github.com/Oneflow-Inc/oneflow
 
+### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
+
+Github Page: https://github.com/AetherCortex/Llama-X
+
+This is the repo for the Llama-X, which aims to:
+
+- Progressively improve the performance of LLaMA to SOTA LLM with open-source community.
+- Conduct Llama-X as an open academic research which is long-term, systematic and rigorous.
+- Save the repetitive work of community and we work together to create more and faster increment.
+
+The project will follow these principles:
+
+- We will publish all the `code`, `model`, `data`, and `experiments` details.
+- We will `continuously` improve the model version by version and open the `newest` method.
+- We will summary the method of each main version as `academic papers`.
+- We announce a complete [research plan](https://github.com/AetherCortex/Llama-X#research-areas). The contributors are wellcome to cooperate with each other to progressively improve Llama-X through iteration of the [target versions](https://github.com/AetherCortex/Llama-X#model).
+- The check-in of the new model must achieve significant improvement with current version on [automatic evaluation](https://github.com/AetherCortex/Llama-X#evaluation).
+
+![Llama-X](./assets/pandallm.png)
+
+
+
 ## Other Chatgpt Reproduction Models
 
 ### ChatGLM-6B
