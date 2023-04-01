@@ -119,6 +119,19 @@ This work collected more than 700 diseases and their corresponding symptoms, rec
 
 <img src="./assets/logo-20230328095104966.png" alt="img" style="zoom:50%;" />
 
+### FastChat
+
+Contains:   `Dataset`, `Finetune Code`,  `Web Demo`
+
+- Github Page: https://github.com/lm-sys/FastChat
+- Blog: https://vicuna.lmsys.org/
+- Dataset: https://github.com/lm-sys/FastChat/blob/main/playground/data/alpaca-data-conversation.json
+- WebDemo: https://chat.lmsys.org/
+
+Vicuna-13B, an open-source chatbot trained by fine-tuning LLaMA on user-shared conversations collected from ShareGPT. Preliminary evaluation using GPT-4 as a judge shows Vicuna-13B achieves more than 90%* quality of OpenAI ChatGPT and Google Bard while outperforming other models like LLaMA and Stanford Alpaca in more than 90%* of cases. The cost of training Vicuna-13B is around $300. The training and serving [code](https://github.com/lm-sys/FastChat), along with an online [demo](https://chat.lmsys.org/), are publicly available for non-commercial use.
+
+<img src="./assets/favicon.jpeg" alt="favicon" style="zoom:50%;" />
+
 
 
 ## Alpaca model fine-tuned for different languages
