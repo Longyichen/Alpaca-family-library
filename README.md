@@ -81,6 +81,24 @@ Some applications:
 
 
 
+### LLM-Adapters
+
+Contains:  `Dataset`, `Finetune Code`
+
+- Github Page: https://github.com/tloen/alpaca-lora 
+- DataSet and Benchmark: https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main/dataset
+- Paper:  https://arxiv.org/abs/2304.01933
+
+*LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models*
+
+LLM-Adapters is an easy-to-use framework that integrates various adapters into LLMs and can execute adapter-based PEFT methods of LLMs for different tasks. LLM-Adapter is an extension of HuggingFace's PEFT library, many thanks for their amazing work! Please find our paper at this link: https://arxiv.org/abs/2304.01933.
+
+The framework includes state-of-the-art open-access LLMs: LLaMa, OPT, BLOOM, and GPT-J, as well as widely used adapters such as Bottleneck adapters, Parallel adapters, and LoRA.
+
+![image-20230406165327964](./assets/image-20230406165327964.png)
+
+
+
 ### Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions
 
 Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `Web Demo`
@@ -147,6 +165,28 @@ finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 - Github Page: https://github.com/xionghonglin/DoctorGLM
 - Model: https://github.com/xionghonglin/DoctorGLM/tree/main/Doctor_GLM
 - DataSet: https://github.com/Toyhom/Chinese-medical-dialogue-data
+
+
+
+### ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型
+
+Contains:  `Dataset`,  `LoRA`,  `Model Weight`
+
+- Github Page: https://github.com/WangRongsheng/ChatGenTitle
+
+- Model: https://github.com/WangRongsheng/ChatGenTitle#release
+
+  ![Logo](./assets/logo-0771972.png)
+
+通过 arXiv 上开放的论文信息，我们构建了一个包含 220 万篇论文元信息的数据库。这些数据通过数据清洗等被构建成了可以用于大模型微调的数据对。将这些论文元信息引入大模型微调，它可以对生成论文题目涉及的难点产生积极影响，它可以从以下几个方面提供帮助： 
+
+\1. 提供更准确、广泛的语言模型：大模型通常使用了大量数据进行训练，因此其语言模型可以更准确地解释自然语言，能够应对更多的语言场景，提升论文题目的语言表达能力；
+
+\2. 提供更加精准的语义理解：大模型采用了深度学习的技术手段，能够构建语言的高维向量表示，从而提供更准确的语义理解能力，帮助生成更精确、准确的论文题目；
+
+\3. 增强创造性和创新性：大模型使用了大量的训练数据，并能够从数据中提取规律，从而提供更多的词汇或句子组合方式，增强了生成论文题目的创造性和创新性；
+
+\4. 提高效率：相比传统的手动方式，使用大模型来生成论文题目可以极大地提高效率，不仅减少了需要写出标题的时间，同时也不容易产生显著的错误，提高了输出的质量。 
 
 
 
@@ -234,6 +274,22 @@ Baize is an open-source chat model fine-tuned with [LoRA](https://github.com/mic
 - Paper: https://arxiv.org/abs/2304.01196
 
 ![Project Baize](./assets/229195563-0cddfa74-e52f-4413-b4b4-e4ba489c4b3d.png)
+
+
+
+### Chinese-ChatLLaMA
+
+Contains:  `Dataset`,  `Finetune Code`,  `Model Weight`
+
+- Github Page: https://github.com/ydli-ai/Chinese-ChatLLaMA
+- Model:  https://huggingface.co/P01son/ChatLLaMA-zh-7B
+- Dataset: https://github.com/dbiir/UER-py/wiki/%E9%A2%84%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE
+
+本项目向社区提供中文对话模型 ChatLLama 、中文基础模型 LLaMA-zh 及其训练数据。 模型基于 [TencentPretrain](https://github.com/Tencent/TencentPretrain) 多模态预训练框架构建， 项目也将陆续开放 7B、13B、30B、65B 规模的中文基础模型 LLaMA-zh 权重。
+
+ChatLLaMA 支持简繁体中文、英文、日文等多语言。 LLaMA 在预训练阶段主要使用英文，为了将其语言能力迁移到中文上，首先进行中文增量预训练， 使用的语料包括中英翻译、中文维基/百度百科、社区互动问答、科学文献等。再通过指令微调得到 ChatLLaMA。
+
+![img](./assets/chatllama.jpg)
 
 
 
@@ -342,6 +398,17 @@ Contains:   `Model Weight`, `Dataset`,`LoRa`
 - Discord: [Discord](https://discord.gg/kvmy6dQB)
 
 Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
+
+### ChatRWKV
+
+Contains:   `Model Weight`, `Dataset`, `Finetune Code`, `Web Demo`
+
+- Github Page: https://github.com/BlinkDL/ChatRWKV
+- Model: https://huggingface.co/BlinkDL
+- Document: https://zhuanlan.zhihu.com/p/616351661
+- Discord: https://discord.gg/bDSBUMeFpc
+
+ChatRWKV is like ChatGPT but powered by my RWKV (100% RNN) language model, which is the only RNN (as of now) that can match transformers in quality and scaling, while being faster and saves VRAM.
 
 
 
