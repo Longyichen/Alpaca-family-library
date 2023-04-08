@@ -13,6 +13,28 @@ Contents：
 - [Other ChatGPT Reproduction Models](https://github.com/Longyichen/Alpaca-family-library#other-chatgpt-reproduction-models)
 - [Some Resources for Instruction Fine-tuning](https://github.com/Longyichen/Alpaca-family-library#some-large-language-models)
 
+## Chat with Open Large Language Model
+
+Web:  https://chat.lmsys.org/
+
+- Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality. [[Blog post\]](https://vicuna.lmsys.org/) [[GitHub\]](https://github.com/lm-sys/FastChat)
+- Koala: A Dialogue Model for Academic Research. [[Blog post\]](https://bair.berkeley.edu/blog/2023/04/03/koala/) [[GitHub\]](https://github.com/young-geng/EasyLM)
+- This demo server. [[GitHub\]](https://github.com/lm-sys/FastChat)
+
+### Terms of use
+
+By using this service, users are required to agree to the following terms: The service is a research preview intended for non-commercial use only. It only provides limited safety measures and may generate offensive content. It must not be used for any illegal, harmful, violent, racist, or sexual purposes. The service may collect user dialogue data for future research.
+
+### Choose a model to chat with
+
+- [Vicuna](https://vicuna.lmsys.org/): a chat assistant fine-tuned from LLaMA on user-shared conversations. This one is expected to perform best according to our evaluation.
+- [Koala](https://bair.berkeley.edu/blog/2023/04/03/koala/): a chatbot fine-tuned from LLaMA on user-shared conversations and open-source datasets. This one performs similarly to Vicuna.
+- [ChatGLM](https://chatglm.cn/blog): An Open Bilingual Dialogue Language Model | 开源双语对话语言模型
+- [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html): a model fine-tuned from LLaMA on 52K instruction-following demonstrations.
+- [LLaMA](https://arxiv.org/abs/2302.13971): open and efficient foundation language models
+
+Note: If you are waiting in the queue, check out more benchmark results from GPT-4 on a static website [here](https://vicuna.lmsys.org/eval).
+
 
 
 ## What’s Alpaca
