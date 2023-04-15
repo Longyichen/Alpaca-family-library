@@ -15,15 +15,13 @@ Contents：
 
 ## Chat with Open Large Language Model
 
+In this website, you can try out many language models mentioned in this repository to conveniently compare their performance and choose the most suitable model for you!
+
 Web:  https://chat.lmsys.org/
 
 - Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality. [[Blog post\]](https://vicuna.lmsys.org/) [[GitHub\]](https://github.com/lm-sys/FastChat)
 - Koala: A Dialogue Model for Academic Research. [[Blog post\]](https://bair.berkeley.edu/blog/2023/04/03/koala/) [[GitHub\]](https://github.com/young-geng/EasyLM)
 - This demo server. [[GitHub\]](https://github.com/lm-sys/FastChat)
-
-### Terms of use
-
-By using this service, users are required to agree to the following terms: The service is a research preview intended for non-commercial use only. It only provides limited safety measures and may generate offensive content. It must not be used for any illegal, harmful, violent, racist, or sexual purposes. The service may collect user dialogue data for future research.
 
 ### Choose a model to chat with
 
@@ -32,8 +30,6 @@ By using this service, users are required to agree to the following terms: The s
 - [ChatGLM](https://chatglm.cn/blog): An Open Bilingual Dialogue Language Model | 开源双语对话语言模型
 - [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html): a model fine-tuned from LLaMA on 52K instruction-following demonstrations.
 - [LLaMA](https://arxiv.org/abs/2302.13971): open and efficient foundation language models
-
-Note: If you are waiting in the queue, check out more benchmark results from GPT-4 on a static website [here](https://vicuna.lmsys.org/eval).
 
 
 
@@ -118,6 +114,76 @@ LLM-Adapters is an easy-to-use framework that integrates various adapters into L
 The framework includes state-of-the-art open-access LLMs: LLaMa, OPT, BLOOM, and GPT-J, as well as widely used adapters such as Bottleneck adapters, Parallel adapters, and LoRA.
 
 ![image-20230406165327964](./assets/image-20230406165327964.png)
+
+
+
+### Koala: A Dialogue Model for Academic Research
+
+Contains: `Dataset`, `Evalutaion`, `Finetune Code`, `Web Demo`
+
+- Blog: https://bair.berkeley.edu/blog/2023/04/03/koala/
+- Model: https://huggingface.co/young-geng/koala/tree/main
+
+![img](./assets/model.png)
+
+Koala, a chatbot trained by fine-tuning Meta’s [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to [ChatGPT](https://openai.com/blog/chatgpt) and [Stanford’s Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html). Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
+
+![img](./assets/results.png)
+
+- [An online interactive demo of Koala](https://koala.lmsys.org/)
+- [EasyLM: our open source framework we used to train Koala](https://github.com/young-geng/EasyLM)
+- [The code for preprocessing our training data](https://github.com/young-geng/koala_data_pipeline)
+- [Our test set of queries](https://github.com/arnav-gudibande/koala-test-set)
+- [Koala model weights diff against the base LLaMA model](https://huggingface.co/young-geng/koala/tree/main)
+
+
+
+### Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way
+
+Contains:   `Model Weight`, `Data Genrating Code`,`Dataset`, `Finetune Code`,  `Web Demo`
+
+[![img](./assets/wombat.png)](https://en.wikipedia.org/wiki/Wombat)
+
+Wombats are adorable little creatures native to Australia. The first three pictures are generated from Stable Diffusion.
+
+This is the repository for RRHF (**R**ank **R**esponse to align **H**uman **F**eedback) and open-sourced language models Wombat. RRHF helps align large language models with human perference easier.
+
+- Github Page:https://github.com/GanjinZero/RRHF
+- Model: https://huggingface.co/GanjinZero/wombat-7b-delta
+- Paper: https://github.com/GanjinZero/RRHF/blob/main/assets/rrhf.pdf
+
+Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (**R**ank **R**esponse from **H**uman **F**eedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
+
+![img](./assets/comparison_of_workflow.png)
+
+
+
+### Dolly
+
+Contains: `Dataset`, `Model Weight`, `Finetune Code`, `Manual Annotation`
+
+- Github Page: https://github.com/databrickslabs/dolly/tree/master
+- Model: https://huggingface.co/databricks/dolly-v2-12b
+- Dataset: https://github.com/databrickslabs/dolly/tree/master/data
+
+Databricks’ [Dolly](https://huggingface.co/databricks/dolly-v2-12b) is an instruction-following large language model trained on the Databricks machine learning platform that is licensed for commercial use. Based on `pythia-12b`, Dolly is trained on ~15k instruction/response fine tuning records [`databricks-dolly-15k`](https://github.com/databrickslabs/dolly/tree/master/data) generated by Databricks employees in capability domains from the InstructGPT paper, including brainstorming, classification, closed QA, generation, information extraction, open QA and summarization. `dolly-v2-12b` is not a state-of-the-art model, but does exhibit surprisingly high quality instruction following behavior not characteristic of the foundation model on which it is based.
+
+```
++-----------------------------------+--------------+------------+--------------+-------------+-----------------+----------+----------+----------+
+|  model                            |   openbookqa |   arc_easy |   winogrande |   hellaswag |   arc_challenge |     piqa |    boolq |    gmean |
++-----------------------------------+--------------+------------+--------------+-------------+-----------------+----------+----------+----------|
+| EleutherAI/pythia-2.8b            |        0.348 |   0.585859 |     0.589582 |    0.591217 |        0.323379 | 0.73395  | 0.638226 | 0.523431 |
+| EleutherAI/pythia-6.9b            |        0.368 |   0.604798 |     0.608524 |    0.631548 |        0.343857 | 0.761153 | 0.6263   | 0.543567 |
+| databricks/dolly-v2-2-8b          |        0.384 |   0.611532 |     0.589582 |    0.650767 |        0.370307 | 0.742655 | 0.575535 | 0.544886 |
+| EleutherAI/pythia-12b             |        0.364 |   0.627104 |     0.636148 |    0.668094 |        0.346416 | 0.760065 | 0.673394 | 0.559676 |
+| EleutherAI/gpt-j-6B               |        0.382 |   0.621633 |     0.651144 |    0.662617 |        0.363481 | 0.761153 | 0.655963 | 0.565936 |
+| databricks/dolly-v2-12b           |        0.408 |   0.63931  |     0.616417 |    0.707927 |        0.388225 | 0.757889 | 0.568196 | 0.56781  |
+| databricks/dolly-v2-6-9b          |        0.392 |   0.633838 |     0.607735 |    0.686517 |        0.406997 | 0.750816 | 0.644037 | 0.573487 |
+| databricks/dolly-v1-6b            |        0.41  |   0.62963  |     0.643252 |    0.676758 |        0.384812 | 0.773667 | 0.687768 | 0.583431 |
+| EleutherAI/gpt-neox-20b           |        0.402 |   0.683923 |     0.656669 |    0.7142   |        0.408703 | 0.784004 | 0.695413 | 0.602236 |
++-----------------------------------+--------------+------------+--------------+-------------+-----------------+----------+----------+----------+
+
+```
 
 
 
@@ -331,11 +397,51 @@ ChatLLaMA 支持简繁体中文、英文、日文等多语言。 LLaMA 在预训
 
 
 
-## Some Large Language Models
+### Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B
+
+Contains:   `Model Weight`, `Dataset`, `Lora`
+
+Guanaco is an instruction-following language model trained on Meta's LLaMA 7B model. Building upon the original 52K data from the Alpaca model, we added an additional 534,530 entries, covering English, Simplified Chinese, Traditional Chinese (Taiwan), Traditional Chinese (Hong Kong), Japanese, Deutsch and various linguistic and grammatical tasks. By retraining and optimizing the model with this rich data, Guanaco demonstrates excellent performance and potential in a multilingual environment.
+
+To promote openness and replicability in research, we have made the [Guanaco Dataset](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) publicly available and plan to release the model weights in the future. By providing these resources, we hope to encourage more researchers to engage in related research and jointly advance the development of instruction-following language models.
+
+When using the Guanaco model, please note the following points:
+\- The Guanaco model has not yet been filtered for harmful, biased, or explicit content. During use, outputs that do not conform to ethical norms may be generated. Please pay special attention to this issue in research or practical applications.
+
+- Github Page: https://guanaco-model.github.io/
+- Dataset: https://huggingface.co/datasets/JosephusCheung/GuanacoDataset
+- Model:
+  - Base Model: https://huggingface.co/KBlueLeaf/guanaco-7B-leh
+  - Lora:  https://huggingface.co/JosephusCheung/GuanacoLatest
+
+
+
+### Firefly(流萤): 中文对话式大语言模型
+
+Contains:   `Model Weight`, `Dataset`, `Finetune Code`, 
+
+- Github Page: https://github.com/yangjianxin1/Firefly
+- Model: https://huggingface.co/YeungNLP/firefly-2b6
+- Dataset: https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M
+
+**Firefly（流萤）** 是一个开源的中文对话式大语言模型，使用指令微调（Instruction Tuning）在中文数据集上进行调优。同时使用了词表裁剪、ZeRO、张量并行等技术，有效降低显存消耗和提高训练效率。 在训练中，我们使用了更小的模型参数量，以及更少的计算资源。
+
+我们构造了许多与中华文化相关的数据，以提升模型这方面的表现，如对联、作诗、文言文翻译、散文、金庸小说等。
+
+- **数据集**：[firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) ， 一份高质量的包含1.1M中文多任务指令微调数据集，包含23种常见的中文NLP任务的指令数据。对于每个任务，由人工书写若干指令模板，保证数据的高质量与丰富度。
+- **模型裁剪**：[LLMPruner：大语言模型裁剪工具](https://github.com/yangjianxin1/LLMPruner) ，使用词表裁剪技术对多语种大语言模型进行权重裁剪，保留预训练知识的前提下，有效减少模型参数量，提高训练效率，并分享裁剪后的多种参数规模的Bloom模型权重。
+- **权重分享**：在[bloom-1b4-zh](https://huggingface.co/YeungNLP/bloom-1b4-zh) 和[bloom-2b6-zh](https://huggingface.co/YeungNLP/bloom-2b6-zh) 的基础上，进行指令微调，获得两种参数规模的中文模型：[firefly-1b4](https://huggingface.co/YeungNLP/firefly-1b4) 和[firefly-2b6](https://huggingface.co/YeungNLP/firefly-2b6)
+- **训练代码**：开源训练代码，支持张量并行、ZeRO、Gemini异构内存空间管理等大模型训练策略。可实现仅使用一张显卡，训练1B-2B参数量的模型（待整理后开源）。
+
+
+
+## Some Large Language Models Projects
 
 Large language models provide powerful foundational capabilities for generative models and are also the basis for model fine-tuning. It is difficult to define what scale of language model can be considered a large language model, as the size of the model's parameters is related to the industry's hardware level (computing power). The scale of large models continues to evolve, and definitions are changing. In addition to OpenAI's GPT series available through an interface, this article lists some other excellent downloadable model weights for commonly used large language models.
 
 Compared to the relatively closed usage of OpenAI's model, fine-tuning this type of language model is also a good choice.
+
+
 
 ### CodeGeeX: A Multilingual Code Generation Model
 
@@ -355,6 +461,8 @@ CodeGeeX, a large-scale multilingual code generation model with 13 billion param
 Some applications:
 
 - OneFlow Code: https://github.com/Oneflow-Inc/oneflow
+
+  
 
 ### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
 
@@ -397,6 +505,8 @@ Some applications:
 - A webui for ChatGLM made by THUDM.https://github.com/Akegarasu/ChatGLM-webui
 - 图文生成版 Visual OpenLLM：https://github.com/visual-openllm/visual-openllm
 
+
+
 ### BELLE: BE Large Language model Engine
 
 Contains:   `Model Weight`, `Data Genrating Code`,`Dataset`
@@ -410,6 +520,8 @@ The goal of this project is to promote the development of the open-source commun
 - Data Release: The Chinese dataset generated [1M](https://huggingface.co/datasets/BelleGroup/generated_train_1M_CN) + [0.5M](https://huggingface.co/datasets/BelleGroup/generated_train_0.5M_CN), using [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) as reference
 - The model optimized based on BLOOMZ-7B1-mt: [BELLE-7B-0.2M](https://huggingface.co/BelleGroup/BELLE-7B-0.2M)，[BELLE-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-7B-0.6M)，[BELLE-7B-1M](https://huggingface.co/BelleGroup/BELLE-7B-1M)，[BELLE-7B-2M](https://huggingface.co/BelleGroup/BELLE-7B-2M)
 - The model optimized based on LLAMA: [BELLE-LLAMA-7B-0.6M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-0.6M)，[BELLE-LLAMA-7B-2M](https://huggingface.co/BelleGroup/BELLE-LLAMA-7B-2M)
+
+
 
 ### ChatYuan: Large Language Model for Dialogue in Chinese and English
 
@@ -426,6 +538,8 @@ ChatYuan large v2 is an open-source large language model for dialogue, supports 
 
 ChatYuan-large-v2是ChatYuan系列中以轻量化实现高质量效果的模型之一，用户可以在消费级显卡、 PC甚至手机上进行推理（INT4 最低只需 400M ）。
 
+
+
 ### GPT4All
 
 Contains:   `Model Weight`, `Dataset`,`LoRa`
@@ -436,6 +550,8 @@ Contains:   `Model Weight`, `Dataset`,`LoRa`
 - Discord: [Discord](https://discord.gg/kvmy6dQB)
 
 Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
+
+
 
 ### ChatRWKV
 
@@ -449,6 +565,32 @@ Contains:   `Model Weight`, `Dataset`, `Finetune Code`, `Web Demo`
 ChatRWKV is like ChatGPT but powered by my RWKV (100% RNN) language model, which is the only RNN (as of now) that can match transformers in quality and scaling, while being faster and saves VRAM.
 
 
+
+### InstructGLM
+
+Contains:   `Model Weight`, `Dataset`, `Finetune Code`, `Web Demo`
+
+基于ChatGLM-6B+LoRA在指令数据集上进行微调
+
+基于deepspeed支持多卡微调，速度相比单卡提升8-9倍
+
+- Github Page:https://github.com/yanqiangmiffy/InstructGLM
+
+
+
+### ChatGLM-finetune-LoRA
+
+Contains:   `Model Weight`, `Dataset`, `Finetune Code`
+
+This repository contains code for fintune [ChatGLM-6b](https://github.com/THUDM/ChatGLM-6B) using [low-rank adaptation (LoRA)](https://arxiv.org/pdf/2106.09685.pdf).
+
+We also provide a [finetuned weight](https://github.com/lich99/ChatGLM-finetune-LoRA/blob/main/saved/chatglm-6b_alpaca_5.pt).
+
+The minimum required GPU memory is **24G**, **RTX3090** is enough for training.
+
+- 2022/4/12: Add tensorboard. Support finetune the entire model (Much faster convergence and usually has better performance)
+- 2022/3/28: Optimized code structure, more simple and clear. Add training instruction.
+- 2022/3/24: Support **Multi-GPU** training, **DeepSpeed**, Batch collate. Using accelerate to launch `train.py`
 
 ## Some Resources for Instruction Fine-tuning.
 
@@ -467,6 +609,8 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 - Github Page: https://github.com/jerryjliu/llama_index
 - Community: [https://llamahub.ai](https://llamahub.ai/)
 
+
+
 ### LMFlow
 
 An extensible, convenient, and efficient toolbox for finetuning large machine learning models, designed to be user-friendly, speedy and reliable, and accessible to the entire community.
@@ -475,6 +619,8 @@ An extensible, convenient, and efficient toolbox for finetuning large machine le
 
 - Github Page: https://github.com/OptimalScale/LMFlow
 - Documentation: https://optimalscale.github.io/LMFlow/
+
+
 
 ### Colossal-AI
 
@@ -486,6 +632,8 @@ The Colossal-AI system addressed the above challenge by introducing a unified in
 - Arixv: [Paper ](https://arxiv.org/abs/2110.14883)
 - ChatColossal: https://medium.com/@yangyou_berkeley/colossalchat-an-open-source-solution-for-cloning-chatgpt-with-a-complete-rlhf-pipeline-5edf08fb538b
 
+
+
 ### alpaca_chinese_dataset
 
 人工精调的中文对话数据集和一段chatglm的微调代码
@@ -496,5 +644,5 @@ The Colossal-AI system addressed the above challenge by introducing a unified in
 
 ## Contributors
 
-[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode)
+[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V)
 
