@@ -15,57 +15,65 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
 
 ## Catalogue
 
-- [Chat with Open Large Language Model](#chat-with-open-large-language-model)
-  - [Choose a model to chat with](#choose-a-model-to-chat-with)
-- [What’s Alpaca](#whats-alpaca)
-- [Models fine-tuned for application](#models-fine-tuned-for-application)
-  - [Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning](#alpaca-lora-low-rank-llama-instruct-tuning)
-  - [LLM-Adapters](#llm-adapters)
-  - [Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way](#wombat-️-from-rlhf-to-rrhf-aligning-human-preferences-in-a-right-way)
-  - [Dolly](#dolly)
-  - [Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
-  - [Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)](#evolving-alpaca-an-empirical-study-on-instruction-tuning-for-large-language-models-alpaca-cot)
-  - [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
-  - [Instruction Tuning with GPT-4](#instruction-tuning-with-gpt-4)
-  - [DoctorGLM](#doctorglm)
-  - [Huatuo-Llama-Med-Chinese](#Huatuo-Llama-Med-Chinese)
-  - [ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
-- [Models fine-tuned for different languages](#models-fine-tuned-for-different-languages)
-  - [骆驼(Luotuo): Chinese-alpaca-lora](#骆驼luotuo-chinese-alpaca-lora)
-  - [KoAlpaca: Korean Alpaca Model based on Stanford Alpaca](#koalpaca-korean-alpaca-model-based-on-stanford-alpaca)
-  - [Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案](#chinese-vicuna-a-chinese-instruction-following-llama-based-model--一个中文低资源的llamalora方案)
-  - [Chinese LLaMA \& Alpaca 大模型](#chinese-llama--alpaca-大模型)
-  - [Japanese-Alpaca-LoRA](#japanese-alpaca-lora)
-  - [Baize](#baize)
-  - [Chinese-ChatLLaMA](#chinese-chatllama)
-  - [Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B](#guanaco-a-multilingual-instruction-following-language-model-based-on-llama-7b)
-- [Models finetuned for Chat](#models-finetuned-for-chat)
-  - [Koala: A Dialogue Model for Academic Research](#koala-a-dialogue-model-for-academic-research)
-  - [FastChat](#fastchat)
-  - [ChatGLM-6B](#chatglm-6b)
-  - [BELLE: BE Large Language model Engine](#belle-be-large-language-model-engine)
-  - [ChatYuan: Large Language Model for Dialogue in Chinese and English](#chatyuan-large-language-model-for-dialogue-in-chinese-and-english)
-  - [Firefly(流萤): 中文对话式大语言模型](#firefly流萤-中文对话式大语言模型)
-  - [GPT4All](#gpt4all)
-  - [ChatRWKV](#chatrwkv)
-  - [InstructGLM](#instructglm)
-  - [ChatGLM-finetune-LoRA](#chatglm-finetune-lora)
-- [Models fintuned for Multi-Modal Tasks](#models-fintuned-for-multi-modal-tasks)
-  - [LLaVA: Large Language and Vision Assistant](#llava-large-language-and-vision-assistant)
-  - [MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models](#minigpt-4-enhancing-vision-language-understanding-with-advanced-large-language-models)
-  - [VisualGPT](#visualgpt)
-  - [Interactive ChatCaptioner for image and video](#interactive-chatcaptioner-for-image-and-video)
-- [Some Large Language Models Projects](#some-large-language-models-projects)
-  - [CodeGeeX: A Multilingual Code Generation Model](#codegeex-a-multilingual-code-generation-model)
-  - [Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM](#llama-x-open-academic-research-on-improving-llama-to-sota-llm)
-- [Some Resources for Instruction Fine-tuning.](#some-resources-for-instruction-fine-tuning)
-  - [🗂️ LlamaIndex 🦙 (GPT Index)](#️-llamaindex--gpt-index)
-  - [LMFlow](#lmflow)
-  - [Colossal-AI](#colossal-ai)
-  - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
-- [Attachment](#attachment)
-- [Contributors](#contributors)
-
+- [Alpaca-family-library](#alpaca-family-library)
+  - [Catalogue](#catalogue)
+  - [Chat with Open Large Language Model](#chat-with-open-large-language-model)
+    - [Choose a model to chat with](#choose-a-model-to-chat-with)
+  - [What’s Alpaca](#whats-alpaca)
+  - [Models fine-tuned for application](#models-fine-tuned-for-application)
+    - [Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning](#alpaca-lora-low-rank-llama-instruct-tuning)
+    - [LLM-Adapters](#llm-adapters)
+    - [Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way](#wombat-️-from-rlhf-to-rrhf-aligning-human-preferences-in-a-right-way)
+    - [Dolly](#dolly)
+    - [Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
+    - [Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)](#evolving-alpaca-an-empirical-study-on-instruction-tuning-for-large-language-models-alpaca-cot)
+    - [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
+    - [Instruction Tuning with GPT-4](#instruction-tuning-with-gpt-4)
+    - [DoctorGLM](#doctorglm)
+    - [ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
+  - [Models fine-tuned for different languages](#models-fine-tuned-for-different-languages)
+    - [骆驼(Luotuo): Chinese-alpaca-lora](#骆驼luotuo-chinese-alpaca-lora)
+    - [KoAlpaca: Korean Alpaca Model based on Stanford Alpaca](#koalpaca-korean-alpaca-model-based-on-stanford-alpaca)
+    - [Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案](#chinese-vicuna-a-chinese-instruction-following-llama-based-model--一个中文低资源的llamalora方案)
+    - [Chinese LLaMA \& Alpaca 大模型](#chinese-llama--alpaca-大模型)
+    - [Japanese-Alpaca-LoRA](#japanese-alpaca-lora)
+    - [Baize](#baize)
+    - [Chinese-ChatLLaMA](#chinese-chatllama)
+    - [Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B](#guanaco-a-multilingual-instruction-following-language-model-based-on-llama-7b)
+  - [Models finetuned for Chat](#models-finetuned-for-chat)
+    - [Koala: A Dialogue Model for Academic Research](#koala-a-dialogue-model-for-academic-research)
+    - [FastChat](#fastchat)
+    - [ChatGLM-6B](#chatglm-6b)
+    - [OpenChatKit](#openchatkit)
+    - [Open Assistant](#open-assistant)
+    - [BELLE: BE Large Language model Engine](#belle-be-large-language-model-engine)
+    - [ChatYuan: Large Language Model for Dialogue in Chinese and English](#chatyuan-large-language-model-for-dialogue-in-chinese-and-english)
+    - [Firefly(流萤): 中文对话式大语言模型](#firefly流萤-中文对话式大语言模型)
+    - [GPT4All](#gpt4all)
+    - [ChatRWKV](#chatrwkv)
+    - [InstructGLM](#instructglm)
+    - [ChatGLM-finetune-LoRA](#chatglm-finetune-lora)
+  - [Models fintuned for Multi-Modal Tasks](#models-fintuned-for-multi-modal-tasks)
+    - [LLaVA: Large Language and Vision Assistant](#llava-large-language-and-vision-assistant)
+    - [MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models](#minigpt-4-enhancing-vision-language-understanding-with-advanced-large-language-models)
+    - [VisualGPT](#visualgpt)
+    - [Interactive ChatCaptioner for image and video](#interactive-chatcaptioner-for-image-and-video)
+  - [Some Large Language Models Projects](#some-large-language-models-projects)
+    - [Flan-UL2](#flan-ul2)
+    - [CodeGeeX: A Multilingual Code Generation Model](#codegeex-a-multilingual-code-generation-model)
+    - [Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM](#llama-x-open-academic-research-on-improving-llama-to-sota-llm)
+    - [Blommz: Crosslingual Generalization through Multitask Finetuning](#blommz-crosslingual-generalization-through-multitask-finetuning)
+    - [Cerebras-GPT: A New Model For Open LLM Development](#cerebras-gpt-a-new-model-for-open-llm-development)
+    - [Pythia: Interpreting Autoregressive Transformers Across Time and Scale](#pythia-interpreting-autoregressive-transformers-across-time-and-scale)
+    - [GeoV](#geov)
+  - [Some Resources for Instruction Fine-tuning.](#some-resources-for-instruction-fine-tuning)
+    - [🗂️ LlamaIndex 🦙 (GPT Index)](#️-llamaindex--gpt-index)
+    - [LMFlow](#lmflow)
+    - [Colossal-AI](#colossal-ai)
+    - [Language Model Evaluation Harness](#language-model-evaluation-harness)
+    - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
+  - [Attachment](#attachment)
+  - [Contributors](#contributors)
 
 
 ## Chat with Open Large Language Model
@@ -518,6 +526,39 @@ Some applications:
 
 
 
+### OpenChatKit
+
+Contains:   `Model Weight`,  `Dataset`, `Finetune Code`, `Web Demo`
+
+- Github Page: https://github.com/togethercomputer/OpenChatKit
+- Model: https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md
+- Web Demo：https://huggingface.co/spaces/togethercomputer/OpenChatKit
+
+OpenChatKit provides a powerful, open-source base to create both specialized and general purpose chatbots for various applications. The kit includes an instruction-tuned language models, a moderation model, and an extensible retrieval system for including up-to-date responses from custom repositories. OpenChatKit models were trained on the OIG-43M training dataset, which was a collaboration between [Together](https://www.together.xyz/), [LAION](https://laion.ai/), and [Ontocord.ai](https://ontocord.ai/).
+
+In this repo, you'll find code for:
+
+- Training GPT-NeoXT-Chat-Base-20B, a 20B parameter chat model (see [docs/GPT-NeoXT-Chat-Base-20B.md](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md))
+- Training Pythia-Chat-Base-7B, a 7B parameter chat model
+- Testing inference using either of the chat models
+- Augmenting the model with additional context from a retrieval index
+
+
+
+### Open Assistant
+
+Contains:   `Model Weight`,  `Dataset`,  `Web Demo`
+
+- Page: https://open-assistant.io/
+- Github: https://github.com/LAION-AI/Open-Assistant
+- Huggingface & dataset: https://huggingface.co/OpenAssistant
+
+Open Assistant is a project meant to give everyone access to a great chat based large language model.
+
+We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
+
+
+
 ### BELLE: BE Large Language model Engine
 
 Contains:   `Model Weight`, `Data Genrating Code`,`Dataset`
@@ -723,6 +764,26 @@ Compared to the relatively closed usage of OpenAI's model, fine-tuning this type
 
 
 
+### Flan-UL2
+
+Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
+
+- Huggingface Page: https://huggingface.co/google/flan-ul2
+
+- Blog：https://www.yitay.net/blog/flan-ul2-20b
+
+- Paper：[Unifying Language Learning Paradigms](https://arxiv.org/abs/2205.05131v1)
+
+Flan-UL2 is an encoder decoder model based on the `T5` architecture. It uses the same configuration as the [`UL2 model`](https://huggingface.co/google/ul2) released earlier last year. It was fine tuned using the "Flan" prompt tuning and dataset collection.
+
+According to the original [blog](https://www.yitay.net/blog/flan-ul2-20b) here are the notable improvements:
+
+- The original UL2 model was only trained with receptive field of 512, which made it non-ideal for N-shot prompting where N is large.
+- The Flan-UL2 checkpoint uses a receptive field of 2048 which makes it more usable for few-shot in-context learning.
+- The original UL2 model also had mode switch tokens that was rather mandatory to get good performance. However, they were a little cumbersome as this requires often some changes during inference or finetuning. In this update/change, we continue training UL2 20B for an additional 100k steps (with small batch) to forget “mode tokens” before applying Flan instruction tuning. This Flan-UL2 checkpoint does not require mode tokens anymore.
+
+![model image](./assets/ul2.png)
+
 ### CodeGeeX: A Multilingual Code Generation Model
 
 Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
@@ -746,7 +807,7 @@ Some applications:
 
 ### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
 
-Github Page: https://github.com/AetherCortex/Llama-X
+- Github Page: https://github.com/AetherCortex/Llama-X
 
 This is the repo for the Llama-X, which aims to:
 
@@ -763,6 +824,87 @@ The project will follow these principles:
 - The check-in of the new model must achieve significant improvement with current version on [automatic evaluation](https://github.com/AetherCortex/Llama-X#evaluation).
 
 ![Llama-X](./assets/pandallm.png)
+
+### Blommz: Crosslingual Generalization through Multitask Finetuning
+
+Contains:   `Model Weights`,  `Dataset`,   `Finetune Code`, `Benchmark`
+
+- Github: https://github.com/bigscience-workshop/xmtf
+- Huggingface page: https://huggingface.co/bigscience/bloomz
+- Paper:  [Crosslingual Generalization through Multitask Finetuning](https://arxiv.org/abs/2211.01786)
+
+This repository provides an overview of all components used for the creation of BLOOMZ & mT0 and xP3 introduced in the paper [Crosslingual Generalization through Multitask Finetuning](https://arxiv.org/abs/2211.01786).
+
+Multitask prompted finetuning (MTF) has been shown to help large language models generalize to new tasks in a zero-shot setting, but so far explorations of MTF have focused on English data and models. We apply MTF to the pretrained multilingual BLOOM and mT5 model families to produce finetuned variants called BLOOMZ and mT0. We find finetuning large multilingual language models on English tasks with English prompts allows for task generalization to non-English languages that appear only in the pretraining corpus. Finetuning on multilingual tasks with English prompts further improves performance on English and non-English tasks leading to various state-of-the-art zero-shot results. We also investigate finetuning on multilingual tasks with prompts that have been machine-translated from English to match the language of each dataset. We find training on these machine-translated prompts leads to better performance on human-written prompts in the respective languages. Surprisingly, we find models are capable of zero-shot generalization to tasks in languages they have never intentionally seen. We conjecture that the models are learning higher-level capabilities that are both task- and language-agnostic. In addition, we introduce xP3, a composite of supervised datasets in 46 languages with English and machine-translated prompts.
+
+| Name                                                         | Explanation                                                  | Example models                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [xP3](https://huggingface.co/datasets/bigscience/xP3)        | Mixture of 13 training tasks in 46 languages with English prompts | [BLOOMZ](https://huggingface.co/bigscience/bloomz) & [mT0-13B](https://huggingface.co/bigscience/mt0-xxl) |
+| [xP3mt](https://huggingface.co/datasets/bigscience/xP3mt)    | Mixture of 13 training tasks in 46 languages with prompts in 20 languages (machine-translated from English) | [BLOOMZ-MT](https://huggingface.co/bigscience/bloomz-mt) & [mT0-13B-MT](https://huggingface.co/bigscience/mt0-xxl-mt) |
+| [xP3all](https://huggingface.co/datasets/bigscience/xP3all)  | xP3 + our evaluation datasets adding an additional 3 tasks for a total of 16 tasks in 46 languages with English prompts |                                                              |
+| [xP3megds](https://huggingface.co/datasets/bigscience/xP3megds) | [Megatron-DeepSpeed](https://github.com/bigscience-workshop/Megatron-DeepSpeed) processed version of xP3 | [BLOOMZ](https://huggingface.co/bigscience/bloomz)           |
+| [P3](https://huggingface.co/datasets/Muennighoff/P3)         | Repreprocessed version of the English-only [P3](https://huggingface.co/datasets/bigscience/P3) with 8 training tasks | [BLOOMZ-P3](https://huggingface.co/bigscience/bloomz-p3) & [mT0-13B-P3](https://huggingface.co/bigscience/mt0-xxl-p3) |
+
+| Multitask finetuned on [xP3](https://huggingface.co/datasets/bigscience/xP3). Recommended for prompting in English. |                                                          |                                                        |                                                          |                                                    |                                                            |                                                              |                                                            |                                                            |                                                          |                                                              |                                                          |
+| ------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------- |
+| Parameters                                                   | 300M                                                     | 580M                                                   | 1.2B                                                     | 3.7B                                               | 13B                                                        | 560M                                                         | 1.1B                                                       | 1.7B                                                       | 3B                                                       | 7.1B                                                         | 176B                                                     |
+| Finetuned Model                                              | [mt0-small](https://huggingface.co/bigscience/mt0-small) | [mt0-base](https://huggingface.co/bigscience/mt0-base) | [mt0-large](https://huggingface.co/bigscience/mt0-large) | [mt0-xl](https://huggingface.co/bigscience/mt0-xl) | [mt0-xxl](https://huggingface.co/bigscience/mt0-xxl)       | [bloomz-560m](https://huggingface.co/bigscience/bloomz-560m) | [bloomz-1b1](https://huggingface.co/bigscience/bloomz-1b1) | [bloomz-1b7](https://huggingface.co/bigscience/bloomz-1b7) | [bloomz-3b](https://huggingface.co/bigscience/bloomz-3b) | [bloomz-7b1](https://huggingface.co/bigscience/bloomz-7b1)   | [bloomz](https://huggingface.co/bigscience/bloomz)       |
+| Multitask finetuned on [xP3mt](https://huggingface.co/datasets/bigscience/xP3mt). Recommended for prompting in non-English. |                                                          |                                                        |                                                          |                                                    |                                                            |                                                              |                                                            |                                                            |                                                          |                                                              |                                                          |
+| Finetuned Model                                              |                                                          |                                                        |                                                          |                                                    | [mt0-xxl-mt](https://huggingface.co/bigscience/mt0-xxl-mt) |                                                              |                                                            |                                                            |                                                          | [bloomz-7b1-mt](https://huggingface.co/bigscience/bloomz-7b1-mt) | [bloomz-mt](https://huggingface.co/bigscience/bloomz-mt) |
+| Multitask finetuned on [P3](https://huggingface.co/datasets/Muennighoff/P3). Released for research purposes only. Strictly inferior to above models! |                                                          |                                                        |                                                          |                                                    |                                                            |                                                              |                                                            |                                                            |                                                          |                                                              |                                                          |
+| Finetuned Model                                              |                                                          |                                                        |                                                          |                                                    | [mt0-xxl-p3](https://huggingface.co/bigscience/mt0-xxl-p3) |                                                              |                                                            |                                                            |                                                          | [bloomz-7b1-p3](https://huggingface.co/bigscience/bloomz-7b1-p3) | [bloomz-p3](https://huggingface.co/bigscience/bloomz-p3) |
+| Original pretrained checkpoints. Not recommended.            |                                                          |                                                        |                                                          |                                                    |                                                            |                                                              |                                                            |                                                            |                                                          |                                                              |                                                          |
+| Pretrained Model                                             | [mt5-small](https://huggingface.co/google/mt5-small)     | [mt5-base](https://huggingface.co/google/mt5-base)     | [mt5-large](https://huggingface.co/google/mt5-large)     | [mt5-xl](https://huggingface.co/google/mt5-xl)     | [mt5-xxl](https://huggingface.co/google/mt5-xxl)           | [bloom-560m](https://huggingface.co/bigscience/bloom-560m)   | [bloom-1b1](https://huggingface.co/bigscience/bloom-1b1)   | [bloom-1b7](https://huggingface.co/bigscience/bloom-1b7)   | [bloom-3b](https://huggingface.co/bigscience/bloom-3b)   | [bloom-7b1](https://huggingface.co/bigscience/bloom-7b1)     | [bloom](https://huggingface.co/bigscience/bloom)         |
+
+
+
+### Cerebras-GPT: A New Model For Open LLM Development
+
+Contains:   `Model Weights`,   `Finetune Code`, `Benchmark`
+
+- Huggingface Page：https://huggingface.co/cerebras/Cerebras-GPT-13B
+- Paper：https://arxiv.org/abs/2304.03208
+
+Artificial intelligence has the potential to transform the world economy, but its access is increasingly gated. The latest large language model – OpenAI’s GPT4 – was released with no information on its model architecture, training data, training hardware, or hyperparameters. Companies are increasingly building large models using closed datasets and offering model outputs only via API access.
+
+The family includes 111M, 256M, 590M, 1.3B, 2.7B, 6.7B, and 13B models.
+
+![img](./assets/Scaling-laws-blog-comparison-uai-2064x956.png)
+
+
+
+### [Pythia: Interpreting Autoregressive Transformers Across Time and Scale](https://arxiv.org/pdf/2304.01373.pdf)
+
+Contains:   `Model Weights`,   `Finetune Code`, `Benchmark`
+
+- Github：https://github.com/EleutherAI/pythia
+- Paper：https://arxiv.org/pdf/2304.01373.pdf
+
+This repository is for EleutherAI's project *Pythia* which combines interpretability analysis and scaling laws to understand how knowledge develops and evolves during training in autoregressive transformers.
+
+How do large language models (LLMs) develop and evolve over the course of training? How do these patterns change as models scale? To answer these questions, we introduce Pythia, a suite of 16 LLMs all trained on public data seen in the exact same order and ranging in size from 70M to 12B parameters. We provide public access to 154 checkpoints for each one of the 16 models, alongside tools to download and reconstruct their exact training dataloaders for further study. We intend Pythia to facilitate research in many areas, and we present several case studies including novel results in memorization, term frequency effects on few-shot performance, and reducing gender bias. We demonstrate that this highly controlled setup can be used to yield novel insights toward LLMs and their training dynamics. 
+
+![image-20230425191648837](./assets/image-20230425191648837.png)
+
+
+
+### GeoV
+
+Contains:   `Model Weights`,   `Bench Marl`
+
+- Github：https://github.com/geov-ai/geov
+
+The GeoV model was designed by Georges Harik and uses [Rotary Positional Embeddings with Relative distances (RoPER)](http://research.labml.ai/RoPER.html) by [Georges Hark](https://twitter.com/ghark) and [Varuna Jayasiri](https://twitter.com/vpj).
+
+[RoPER](http://research.labml.ai/RoPER.html), in addition to using relative positions in the attention score calculation by RoPE embeddings, adds relative positional information explicitly to value embeddings. Specifically, it incorporates the relative positions of the tokens paid attention to. RoPER has given better performance in some algorithmic tasks, and seems comparable to RoPE in language modeling.
+
+The GeoV tokenizer uses [SentencePiece](https://github.com/google/sentencepiece) [unigram language model](https://arxiv.org/abs/1804.10959) and tokenizes symbols, digits and new line characters separately, in order to achieve better performance on mathematical content and code.
+
+This model was contributed by [gharik](https://huggingface.co/gharik) and [vpj](https://huggingface.co/vpj).
+
+We have shared 9B parameter pre-trained model at [GeoV/GeoV-9b](https://huggingface.co/GeoV/GeoV-9b), The released weights were trained on ~70 billion tokens. We plan to continue training up to 300 billion tokens and update the weights at every 20b tokens. This training run is monolingual and uses c4en and english wikipedia datasets. We will also train smaller and larger versions. Our aim is to have broadly available smaller and larger models.
+
+This implementation is built on top of [transformers](https://github.com/huggingface/transformers) library.
 
 
 
@@ -805,6 +947,21 @@ The Colossal-AI system addressed the above challenge by introducing a unified in
 
 - Arixv: [Paper ](https://arxiv.org/abs/2110.14883)
 - ChatColossal: https://medium.com/@yangyou_berkeley/colossalchat-an-open-source-solution-for-cloning-chatgpt-with-a-complete-rlhf-pipeline-5edf08fb538b
+
+
+
+### Language Model Evaluation Harness
+
+Github: https://github.com/EleutherAI/lm-evaluation-harness
+
+This project provides a unified framework to test generative language models on a large number of different evaluation tasks.
+
+Features:
+
+- 200+ tasks implemented. See the [task-table](https://github.com/EleutherAI/lm-evaluation-harness/blob/master/docs/task_table.md) for a complete list.
+- Support for the Hugging Face `transformers` library, GPT-NeoX, Megatron-DeepSpeed, and the OpenAI API, with flexible tokenization-agnostic interface.
+- Support for evaluation on adapters (e.g. LoRa) supported in [HuggingFace's PEFT library](https://github.com/huggingface/peft).
+- Task versioning to ensure reproducibility.
 
 
 
