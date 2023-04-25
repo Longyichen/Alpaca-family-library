@@ -4,14 +4,68 @@ Summarize all low-cost replication methods for Chatgpt countiously. It is believ
 
 Welcome everyone to provide pull requests, and I will also regularly track the latest developments in this repository！
 
-Contents：
+**What's New！**
 
-- [What’s Alpaca](https://github.com/Longyichen/Alpaca-family-library#whats-alpaca)
-- [Alpaca model fine-tuned for application](https://github.com/Longyichen/Alpaca-family-library#alpaca-model-fine-tuned-for-application)
-- [Alpaca model fine-tuned for different languages](https://github.com/Longyichen/Alpaca-family-library#alpaca-model-fine-tuned-for-different-languages)
-- [Some Large Language Models](https://github.com/Longyichen/Alpaca-family-library#some-large-language-models)
-- [Other ChatGPT Reproduction Models](https://github.com/Longyichen/Alpaca-family-library#other-chatgpt-reproduction-models)
-- [Some Resources for Instruction Fine-tuning](https://github.com/Longyichen/Alpaca-family-library#some-large-language-models)
+- Edit Structure 2022/4/25
+- Add three new Motimodal models  2022/4/25
+- Add Attachments
+- Add 
+
+
+
+## Catalogue
+
+- [Chat with Open Large Language Model](#chat-with-open-large-language-model)
+  - [Choose a model to chat with](#choose-a-model-to-chat-with)
+- [What’s Alpaca](#whats-alpaca)
+- [Models fine-tuned for application](#models-fine-tuned-for-application)
+  - [Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning](#alpaca-lora-low-rank-llama-instruct-tuning)
+  - [LLM-Adapters](#llm-adapters)
+  - [Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way](#wombat-️-from-rlhf-to-rrhf-aligning-human-preferences-in-a-right-way)
+  - [Dolly](#dolly)
+  - [Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
+  - [Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)](#evolving-alpaca-an-empirical-study-on-instruction-tuning-for-large-language-models-alpaca-cot)
+  - [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
+  - [Instruction Tuning with GPT-4](#instruction-tuning-with-gpt-4)
+  - [DoctorGLM](#doctorglm)
+  - [ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
+- [Models fine-tuned for different languages](#models-fine-tuned-for-different-languages)
+  - [骆驼(Luotuo): Chinese-alpaca-lora](#骆驼luotuo-chinese-alpaca-lora)
+  - [KoAlpaca: Korean Alpaca Model based on Stanford Alpaca](#koalpaca-korean-alpaca-model-based-on-stanford-alpaca)
+  - [Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案](#chinese-vicuna-a-chinese-instruction-following-llama-based-model--一个中文低资源的llamalora方案)
+  - [Chinese LLaMA \& Alpaca 大模型](#chinese-llama--alpaca-大模型)
+  - [Japanese-Alpaca-LoRA](#japanese-alpaca-lora)
+  - [Baize](#baize)
+  - [Chinese-ChatLLaMA](#chinese-chatllama)
+  - [Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B](#guanaco-a-multilingual-instruction-following-language-model-based-on-llama-7b)
+- [Models finetuned for Chat](#models-finetuned-for-chat)
+  - [Koala: A Dialogue Model for Academic Research](#koala-a-dialogue-model-for-academic-research)
+  - [FastChat](#fastchat)
+  - [ChatGLM-6B](#chatglm-6b)
+  - [BELLE: BE Large Language model Engine](#belle-be-large-language-model-engine)
+  - [ChatYuan: Large Language Model for Dialogue in Chinese and English](#chatyuan-large-language-model-for-dialogue-in-chinese-and-english)
+  - [Firefly(流萤): 中文对话式大语言模型](#firefly流萤-中文对话式大语言模型)
+  - [GPT4All](#gpt4all)
+  - [ChatRWKV](#chatrwkv)
+  - [InstructGLM](#instructglm)
+  - [ChatGLM-finetune-LoRA](#chatglm-finetune-lora)
+- [Models fintuned for Multi-Modal Tasks](#models-fintuned-for-multi-modal-tasks)
+  - [LLaVA: Large Language and Vision Assistant](#llava-large-language-and-vision-assistant)
+  - [MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models](#minigpt-4-enhancing-vision-language-understanding-with-advanced-large-language-models)
+  - [VisualGPT](#visualgpt)
+  - [Interactive ChatCaptioner for image and video](#interactive-chatcaptioner-for-image-and-video)
+- [Some Large Language Models Projects](#some-large-language-models-projects)
+  - [CodeGeeX: A Multilingual Code Generation Model](#codegeex-a-multilingual-code-generation-model)
+  - [Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM](#llama-x-open-academic-research-on-improving-llama-to-sota-llm)
+- [Some Resources for Instruction Fine-tuning.](#some-resources-for-instruction-fine-tuning)
+  - [🗂️ LlamaIndex 🦙 (GPT Index)](#️-llamaindex--gpt-index)
+  - [LMFlow](#lmflow)
+  - [Colossal-AI](#colossal-ai)
+  - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
+- [Attachment](#attachment)
+- [Contributors](#contributors)
+
+
 
 ## Chat with Open Large Language Model
 
@@ -75,7 +129,7 @@ Some applications:
 
   
 
-## Alpaca model fine-tuned for application
+## Models fine-tuned for application
 
 A series of fine-tuned models derived from the Alpaca model. Some of them have publicly available weights, are fine-tuned for specific domains, and have better performance. These types of models are still being continuously developed.
 
@@ -114,27 +168,6 @@ LLM-Adapters is an easy-to-use framework that integrates various adapters into L
 The framework includes state-of-the-art open-access LLMs: LLaMa, OPT, BLOOM, and GPT-J, as well as widely used adapters such as Bottleneck adapters, Parallel adapters, and LoRA.
 
 ![image-20230406165327964](./assets/image-20230406165327964.png)
-
-
-
-### Koala: A Dialogue Model for Academic Research
-
-Contains: `Dataset`, `Evalutaion`, `Finetune Code`, `Web Demo`
-
-- Blog: https://bair.berkeley.edu/blog/2023/04/03/koala/
-- Model: https://huggingface.co/young-geng/koala/tree/main
-
-![img](./assets/model.png)
-
-Koala, a chatbot trained by fine-tuning Meta’s [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to [ChatGPT](https://openai.com/blog/chatgpt) and [Stanford’s Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html). Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
-
-![img](./assets/results.png)
-
-- [An online interactive demo of Koala](https://koala.lmsys.org/)
-- [EasyLM: our open source framework we used to train Koala](https://github.com/young-geng/EasyLM)
-- [The code for preprocessing our training data](https://github.com/young-geng/koala_data_pipeline)
-- [Our test set of queries](https://github.com/arnav-gudibande/koala-test-set)
-- [Koala model weights diff against the base LLaMA model](https://huggingface.co/young-geng/koala/tree/main)
 
 
 
@@ -227,21 +260,6 @@ This work collected more than 700 diseases and their corresponding symptoms, rec
 
 
 
-### FastChat
-
-Contains:   `Dataset`, `Finetune Code`,  `Web Demo`
-
-- Github Page: https://github.com/lm-sys/FastChat
-- Blog: https://vicuna.lmsys.org/
-- Dataset: https://github.com/lm-sys/FastChat/blob/main/playground/data/alpaca-data-conversation.json
-- WebDemo: https://chat.lmsys.org/
-
-Vicuna-13B, an open-source chatbot trained by fine-tuning LLaMA on user-shared conversations collected from ShareGPT. Preliminary evaluation using GPT-4 as a judge shows Vicuna-13B achieves more than 90%* quality of OpenAI ChatGPT and Google Bard while outperforming other models like LLaMA and Stanford Alpaca in more than 90%* of cases. The cost of training Vicuna-13B is around $300. The training and serving [code](https://github.com/lm-sys/FastChat), along with an online [demo](https://chat.lmsys.org/), are publicly available for non-commercial use.
-
-<img src="./assets/favicon.jpeg" alt="favicon" style="zoom:50%;" />
-
-
-
 ### Instruction Tuning with GPT-4
 
 Contains:  `Dataset`,  `Finetune Code`
@@ -294,7 +312,7 @@ Contains:  `Dataset`,  `LoRA`,  `Model Weight`
 
 
 
-## Alpaca model fine-tuned for different languages
+## Models fine-tuned for different languages
 
 ### 骆驼(Luotuo): Chinese-alpaca-lora
 
@@ -336,6 +354,8 @@ This is the repo for the Chinese-Vicuna project, which aims to build and share a
 
 ![camel](https://github.com/Facico/Chinese-Vicuna/raw/master/img/vicuna-llama.png)
 
+
+
 ### Chinese LLaMA & Alpaca 大模型
 
 Contains:  `Model Weight`, `LoRA`,
@@ -346,8 +366,8 @@ To promote open research of large models in the Chinese NLP community, this proj
 
 Note: The following models cannot be used directly and must be reconstructed following the steps provided in this project's [Model Reconstruction](https://github.com/ymcui/Chinese-LLaMA-Alpaca/blob/main/README_EN.md#Model-Reconstruction) section.
 
-| Model Name        | Type                        | Base Model Required for Reconstruction | Size[2] | LoRA Download Link                                           | SHA256[3]          |
-| ----------------- | --------------------------- | -------------------------------------- | ------- | ------------------------------------------------------------ | ------------------ |
+| Model Name        | Type                        | Base Model Required for Reconstruction | Size[2] | LoRA Download Link                                                                                | SHA256[3]          |
+| ----------------- | --------------------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------- | ------------------ |
 | Chinese-LLaMA-7B  | General                     | Original LLaMA-7B[1]                   | 770M    | [[Cloud Disk Link\]](https://pan.baidu.com/s/1oORTdpr2TvlkxjpyWtb5Sw?pwd=33hb) （Password: 33hb） | 39b86b......fe0e60 |
 | Chinese-Alpaca-7B | Fine-tuned for Instructions | Original LLaMA-7B[1]                   | 790M    | [[Cloud Disk Link\]](https://pan.baidu.com/s/1xV1UXjh1EPrPtXg6WyG7XQ?pwd=923e) （Password：923e） | 9bb5b6......ce2d87 |
 
@@ -416,77 +436,45 @@ When using the Guanaco model, please note the following points:
 
 
 
-### Firefly(流萤): 中文对话式大语言模型
+##  Models finetuned for Chat
 
-Contains:   `Model Weight`, `Dataset`, `Finetune Code`, 
+This type of model is mainly fine-tuned for dialogue tasks, so it has good conversation response capabilities.
 
-- Github Page: https://github.com/yangjianxin1/Firefly
-- Model: https://huggingface.co/YeungNLP/firefly-2b6
-- Dataset: https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M
+### Koala: A Dialogue Model for Academic Research
 
-**Firefly（流萤）** 是一个开源的中文对话式大语言模型，使用指令微调（Instruction Tuning）在中文数据集上进行调优。同时使用了词表裁剪、ZeRO、张量并行等技术，有效降低显存消耗和提高训练效率。 在训练中，我们使用了更小的模型参数量，以及更少的计算资源。
+Contains: `Dataset`, `Evalutaion`, `Finetune Code`, `Web Demo`
 
-我们构造了许多与中华文化相关的数据，以提升模型这方面的表现，如对联、作诗、文言文翻译、散文、金庸小说等。
+- Blog: https://bair.berkeley.edu/blog/2023/04/03/koala/
+- Model: https://huggingface.co/young-geng/koala/tree/main
 
-- **数据集**：[firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) ， 一份高质量的包含1.1M中文多任务指令微调数据集，包含23种常见的中文NLP任务的指令数据。对于每个任务，由人工书写若干指令模板，保证数据的高质量与丰富度。
-- **模型裁剪**：[LLMPruner：大语言模型裁剪工具](https://github.com/yangjianxin1/LLMPruner) ，使用词表裁剪技术对多语种大语言模型进行权重裁剪，保留预训练知识的前提下，有效减少模型参数量，提高训练效率，并分享裁剪后的多种参数规模的Bloom模型权重。
-- **权重分享**：在[bloom-1b4-zh](https://huggingface.co/YeungNLP/bloom-1b4-zh) 和[bloom-2b6-zh](https://huggingface.co/YeungNLP/bloom-2b6-zh) 的基础上，进行指令微调，获得两种参数规模的中文模型：[firefly-1b4](https://huggingface.co/YeungNLP/firefly-1b4) 和[firefly-2b6](https://huggingface.co/YeungNLP/firefly-2b6)
-- **训练代码**：开源训练代码，支持张量并行、ZeRO、Gemini异构内存空间管理等大模型训练策略。可实现仅使用一张显卡，训练1B-2B参数量的模型（待整理后开源）。
+![img](./assets/model.png)
 
+Koala, a chatbot trained by fine-tuning Meta’s [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to [ChatGPT](https://openai.com/blog/chatgpt) and [Stanford’s Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html). Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
 
+![img](./assets/results.png)
 
-## Some Large Language Models Projects
-
-Large language models provide powerful foundational capabilities for generative models and are also the basis for model fine-tuning. It is difficult to define what scale of language model can be considered a large language model, as the size of the model's parameters is related to the industry's hardware level (computing power). The scale of large models continues to evolve, and definitions are changing. In addition to OpenAI's GPT series available through an interface, this article lists some other excellent downloadable model weights for commonly used large language models.
-
-Compared to the relatively closed usage of OpenAI's model, fine-tuning this type of language model is also a good choice.
+- [An online interactive demo of Koala](https://koala.lmsys.org/)
+- [EasyLM: our open source framework we used to train Koala](https://github.com/young-geng/EasyLM)
+- [The code for preprocessing our training data](https://github.com/young-geng/koala_data_pipeline)
+- [Our test set of queries](https://github.com/arnav-gudibande/koala-test-set)
+- [Koala model weights diff against the base LLaMA model](https://huggingface.co/young-geng/koala/tree/main)
 
 
 
-### CodeGeeX: A Multilingual Code Generation Model
+### FastChat
 
-Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
+Contains:   `Dataset`, `Finetune Code`,  `Web Demo`
 
-CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
+- Github Page: https://github.com/lm-sys/FastChat
+- Blog: https://vicuna.lmsys.org/
+- Dataset: https://github.com/lm-sys/FastChat/blob/main/playground/data/alpaca-data-conversation.json
+- WebDemo: https://chat.lmsys.org/
 
-- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
-- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
-- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
-- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
+Vicuna-13B, an open-source chatbot trained by fine-tuning LLaMA on user-shared conversations collected from ShareGPT. Preliminary evaluation using GPT-4 as a judge shows Vicuna-13B achieves more than 90%* quality of OpenAI ChatGPT and Google Bard while outperforming other models like LLaMA and Stanford Alpaca in more than 90%* of cases. The cost of training Vicuna-13B is around $300. The training and serving [code](https://github.com/lm-sys/FastChat), along with an online [demo](https://chat.lmsys.org/), are publicly available for non-commercial use.
 
-- Github Page: https://github.com/THUDM/CodeGeeX 
-
-- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
-
-Some applications:
-
-- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
-
-  
-
-### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
-
-Github Page: https://github.com/AetherCortex/Llama-X
-
-This is the repo for the Llama-X, which aims to:
-
-- Progressively improve the performance of LLaMA to SOTA LLM with open-source community.
-- Conduct Llama-X as an open academic research which is long-term, systematic and rigorous.
-- Save the repetitive work of community and we work together to create more and faster increment.
-
-The project will follow these principles:
-
-- We will publish all the `code`, `model`, `data`, and `experiments` details.
-- We will `continuously` improve the model version by version and open the `newest` method.
-- We will summary the method of each main version as `academic papers`.
-- We announce a complete [research plan](https://github.com/AetherCortex/Llama-X#research-areas). The contributors are wellcome to cooperate with each other to progressively improve Llama-X through iteration of the [target versions](https://github.com/AetherCortex/Llama-X#model).
-- The check-in of the new model must achieve significant improvement with current version on [automatic evaluation](https://github.com/AetherCortex/Llama-X#evaluation).
-
-![Llama-X](./assets/pandallm.png)
+<img src="./assets/favicon.jpeg" alt="favicon" style="zoom:50%;" />
 
 
-
-## Other Chatgpt Reproduction Models
 
 ### ChatGLM-6B
 
@@ -537,6 +525,25 @@ ChatYuan-large-v2是一个支持中英双语的功能型对话语言大模型。
 ChatYuan large v2 is an open-source large language model for dialogue, supports both Chinese and English languages, and in ChatGPT style.
 
 ChatYuan-large-v2是ChatYuan系列中以轻量化实现高质量效果的模型之一，用户可以在消费级显卡、 PC甚至手机上进行推理（INT4 最低只需 400M ）。
+
+
+
+### Firefly(流萤): 中文对话式大语言模型
+
+Contains:   `Model Weight`, `Dataset`, `Finetune Code`, 
+
+- Github Page: https://github.com/yangjianxin1/Firefly
+- Model: https://huggingface.co/YeungNLP/firefly-2b6
+- Dataset: https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M
+
+**Firefly（流萤）** 是一个开源的中文对话式大语言模型，使用指令微调（Instruction Tuning）在中文数据集上进行调优。同时使用了词表裁剪、ZeRO、张量并行等技术，有效降低显存消耗和提高训练效率。 在训练中，我们使用了更小的模型参数量，以及更少的计算资源。
+
+我们构造了许多与中华文化相关的数据，以提升模型这方面的表现，如对联、作诗、文言文翻译、散文、金庸小说等。
+
+- **数据集**：[firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) ， 一份高质量的包含1.1M中文多任务指令微调数据集，包含23种常见的中文NLP任务的指令数据。对于每个任务，由人工书写若干指令模板，保证数据的高质量与丰富度。
+- **模型裁剪**：[LLMPruner：大语言模型裁剪工具](https://github.com/yangjianxin1/LLMPruner) ，使用词表裁剪技术对多语种大语言模型进行权重裁剪，保留预训练知识的前提下，有效减少模型参数量，提高训练效率，并分享裁剪后的多种参数规模的Bloom模型权重。
+- **权重分享**：在[bloom-1b4-zh](https://huggingface.co/YeungNLP/bloom-1b4-zh) 和[bloom-2b6-zh](https://huggingface.co/YeungNLP/bloom-2b6-zh) 的基础上，进行指令微调，获得两种参数规模的中文模型：[firefly-1b4](https://huggingface.co/YeungNLP/firefly-1b4) 和[firefly-2b6](https://huggingface.co/YeungNLP/firefly-2b6)
+- **训练代码**：开源训练代码，支持张量并行、ZeRO、Gemini异构内存空间管理等大模型训练策略。可实现仅使用一张显卡，训练1B-2B参数量的模型（待整理后开源）
 
 
 
@@ -592,6 +599,150 @@ The minimum required GPU memory is **24G**, **RTX3090** is enough for training.
 - 2022/3/28: Optimized code structure, more simple and clear. Add training instruction.
 - 2022/3/24: Support **Multi-GPU** training, **DeepSpeed**, Batch collate. Using accelerate to launch `train.py`
 
+
+
+## Models fintuned for Multi-Modal Tasks
+
+Multimodal models refer to the use of technologies such as prompt, adapter, and Lora to provide prompts or fine-tuning for large language models, enabling them to understand multimodal information such as images. Multimodal language models may have stronger capabilities, but research has also shown that multimodal fine-tuning can damage the performance of the language model itself.
+
+
+
+### LLaVA: Large Language and Vision Assistant
+
+ Contains:  `Dataset`, `Finetune Code`, `Model Weight`, `Web Demo`
+
+- Github Page: https://github.com/haotian-liu/LLaVA
+- Blog Page: https://llava-vl.github.io/
+- Paper:  https://arxiv.org/abs/2304.08485
+- WebDemo: https://llava.hliu.cc/
+- Dataset: https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K
+- Model: https://huggingface.co/liuhaotian/LLaVA-13b-delta-v0
+
+LLaVA represents a novel end-to-end trained large multimodal model that combines a vision encoder and Vicuna for general-purpose visual and language understanding, achieving impressive chat capabilities mimicking spirits of the multimodal GPT-4 and setting a new state-of-the-art accuracy on Science QA.
+
+1. **Multimodal Instruct Data**. We present the first attempt to use [language-only GPT-4](https://openai.com/research/gpt-4) to generate multimodal language-image instruction-following data.
+
+2. **LLaVA Model**. We introduce **LLaVA** (**L**arge **L**anguage-**a**nd-**V**ision **A**ssistant), an end-to-end trained large multimodal model that connects a vision encoder and LLM for general-purpose visual and language understanding.
+
+3. **Performance**. Our early experiments show that LLaVA demonstrates impressive multimodel chat abilities, sometimes exhibiting the behaviors of multimodal GPT-4 on unseen images/instructions, and yields a 85.1% relative score compared with GPT-4 on a synthetic multimodal instruction-following dataset. When fine-tuned on [Science QA](https://scienceqa.github.io/), the synergy of LLaVA and GPT-4 achieves a new state-of-the-art accuracy of 92.53%.
+
+4. **Open-source**. We make GPT-4 generated visual instruction tuning data, our model and code base publicly available.
+
+   
+
+   ![img](./assets/llava_arch.png)
+
+
+
+### MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models
+
+ Contains:  `Dataset`, `Finetune Code`, `Model Weight`, `Web Demo`
+
+- Github Page: https://github.com/Vision-CAIR/MiniGPT-4
+- Blog Page: https://minigpt-4.github.io/
+- Paper:  https://github.com/Vision-CAIR/MiniGPT-4/blob/main/MiniGPT_4.pdf
+- WebDemo: https://minigpt-4.github.io/
+
+MiniGPT-4 aligns a frozen visual encoder from BLIP-2 with a frozen LLM, Vicuna, using just one projection layer.
+
+We train MiniGPT-4 with two stages. The first traditional pretraining stage is trained using roughly 5 million aligned image-text pairs in 10 hours using 4 A100s. After the first stage, Vicuna is able to understand the image. But the generation ability of Vicuna is heavilly impacted.
+
+To address this issue and improve usability, we propose a novel way to create high-quality image-text pairs by the model itself and ChatGPT together. Based on this, we then create a small (3500 pairs in total) yet high-quality dataset.
+
+The second finetuning stage is trained on this dataset in a conversation template to significantly improve its generation reliability and overall usability. To our surprise, this stage is computationally efficient and takes only around 7 minutes with a single A100.
+
+MiniGPT-4 yields many emerging vision-language capabilities similar to those demonstrated in GPT-4.
+
+![img](blob:https://nxxt153nq1g.feishu.cn/39499b26-0168-42b0-8bd6-e592c3beefc9)
+
+
+
+### VisualGPT
+
+ Contains:  `Dataset`, `Finetune Code`
+
+- Github Page:https://github.com/Vision-CAIR/VisualGPT
+- Paper:  [VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning](https://arxiv.org/abs/2102.10407)
+
+The ability to quickly learn from a small quantity oftraining data widens the range of machine learning applications. In this paper, we propose a data-efficient image captioning model, VisualGPT, which leverages the linguistic knowledge from a large pretrained language model(LM). A crucial challenge is to balance between the use of visual information in the image and prior linguistic knowledge acquired from pretraining. We designed a novel self-resurrecting encoder-decoder attention mechanism to quickly adapt the pretrained LM as the language decoder ona small amount of in-domain training data. The proposed self-resurrecting activation unit produces sparse activations but has reduced susceptibility to zero gradients. We train the proposed model, VisualGPT, on 0.1%, 0.5% and 1% of MSCOCO and Conceptual Captions training data. Under these conditions, we outperform the best baseline model by up to 10.8% CIDEr on MS COCO and upto 5.4% CIDEr on Conceptual Captions. Further, Visual-GPT achieves the state-of-the-art result on IU X-ray, a medical report generation dataset. To the best of our knowledge, this is the first work that improves data efficiency of image captioning by utilizing LM pretrained on unimodal data.
+
+
+
+![image](./assets/final_architecture.jpg)
+
+
+
+### Interactive ChatCaptioner for image and video
+
+Contains:  `Prompts`, 
+
+Needs: `Openai Keys`
+
+Discover the powerful questioning ability of LLMs and their great potential for acquiring information effectively. As an exploration, we introduce ChatCaptioner in image captioning. ChatCaptioner enrichs the image caption of BLIP-2 by prompting ChatGPT to keep asking informative questions to BLIP-2 and summarize the conversation at the end as the final caption.
+
+Official repository of **ChatCaptioner** and **Video ChatCaptioner**.
+
+- Gihub Page: https://github.com/Vision-CAIR/ChatCaptioner
+
+- ChatCaptioner paper [ChatGPT Asks, BLIP-2 Answers: Automatic Questioning Towards Enriched Visual Descriptions](https://arxiv.org/abs/2303.06594)
+
+- Video ChatCaptioner paper [Video ChatCaptioner: Towards the Enriched Spatiotemporal Descriptions](https://arxiv.org/abs/2304.04227)
+
+![demo1](./assets/demo1.gif)
+
+
+
+## Some Large Language Models Projects
+
+Large language models provide powerful foundational capabilities for generative models and are also the basis for model fine-tuning. It is difficult to define what scale of language model can be considered a large language model, as the size of the model's parameters is related to the industry's hardware level (computing power). The scale of large models continues to evolve, and definitions are changing. In addition to OpenAI's GPT series available through an interface, this article lists some other excellent downloadable model weights for commonly used large language models.
+
+Compared to the relatively closed usage of OpenAI's model, fine-tuning this type of language model is also a good choice.
+
+
+
+### CodeGeeX: A Multilingual Code Generation Model
+
+Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
+
+CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
+
+- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
+- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
+- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
+- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
+
+- Github Page: https://github.com/THUDM/CodeGeeX 
+
+- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
+
+Some applications:
+
+- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
+
+  
+
+### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
+
+Github Page: https://github.com/AetherCortex/Llama-X
+
+This is the repo for the Llama-X, which aims to:
+
+- Progressively improve the performance of LLaMA to SOTA LLM with open-source community.
+- Conduct Llama-X as an open academic research which is long-term, systematic and rigorous.
+- Save the repetitive work of community and we work together to create more and faster increment.
+
+The project will follow these principles:
+
+- We will publish all the `code`, `model`, `data`, and `experiments` details.
+- We will `continuously` improve the model version by version and open the `newest` method.
+- We will summary the method of each main version as `academic papers`.
+- We announce a complete [research plan](https://github.com/AetherCortex/Llama-X#research-areas). The contributors are wellcome to cooperate with each other to progressively improve Llama-X through iteration of the [target versions](https://github.com/AetherCortex/Llama-X#model).
+- The check-in of the new model must achieve significant improvement with current version on [automatic evaluation](https://github.com/AetherCortex/Llama-X#evaluation).
+
+![Llama-X](./assets/pandallm.png)
+
+
+
 ## Some Resources for Instruction Fine-tuning.
 
 ### 🗂️ LlamaIndex 🦙 (GPT Index)
@@ -641,6 +792,14 @@ The Colossal-AI system addressed the above challenge by introducing a unified in
 当前的聊天对话模型数据集主要都是由英文构成，但是当前中文聊天模型构建的需求也较为迫切，因此我们将斯坦福的alpaca数据集进行中文翻译，并再制造一些对话数据，并开源提供。
 
 - Github Page: https://github.com/hikariming/alpaca_chinese_dataset
+
+
+
+## Attachment
+
+![image-20230423110534258](./assets/image-20230423110534258.png)
+
+
 
 ## Contributors
 
