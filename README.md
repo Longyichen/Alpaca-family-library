@@ -76,7 +76,6 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
   - [Contributors](#contributors)
 
 
-
 ## Chat with Open Large Language Model
 
 In this website, you can try out many language models mentioned in this repository to conveniently compare their performance and choose the most suitable model for you!
@@ -299,6 +298,26 @@ finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 - Github Page: https://github.com/xionghonglin/DoctorGLM
 - Model: https://github.com/xionghonglin/DoctorGLM/tree/main/Doctor_GLM
 - DataSet: https://github.com/Toyhom/Chinese-medical-dialogue-data
+
+
+
+### Huatuo-Llama-Med-Chinese
+
+Contains:  `Dataset`,  `Finetune Code`,  `LoRA`,  `Model Weight`  
+
+中文问诊模型， 基于 LLaMA-7B/ChatGLM-6B + lora 进行finetune，通过医学知识图谱和GPT3.5 API构建了中文医学指令数据集，并在此基础上对LLaMA进行了指令微调，提高了LLaMA在医疗领域的问答效果。
+
+- Github Page: https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese  
+
+- Model: https://huggingface.co/thinksoso/lora-llama-med  
+
+    https://pan.baidu.com/s/1jih-pEr6jzEa6n2u6sUMOg?pwd=jjpf  
+
+- DataSet: Coming soon.
+
+
+
+<img src="./assets/Huatuo_logo.png" alt="img" style="zoom:70%;" />
 
 
 
@@ -964,5 +983,4 @@ Features:
 
 ## Contributors
 
-[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V)
-
+[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V), [JianSen Qiao](https://github.com/QJSQJS)
