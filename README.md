@@ -6,10 +6,10 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
 
 **What's New！**
 
-- Edit Structure 2022/4/25
-- Add three new Motimodal models  2022/4/25
-- Add Attachments
-- Add 
+- Edit Structure 2023/4/25
+- Add three new Motimodal models  2023/4/25
+- Add Attachments 2023/4/25
+- Initial construction 2022/3/27
 
 
 
@@ -132,6 +132,8 @@ Some applications:
 ## Models fine-tuned for application
 
 A series of fine-tuned models derived from the Alpaca model. Some of them have publicly available weights, are fine-tuned for specific domains, and have better performance. These types of models are still being continuously developed.
+
+
 
 ### Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning
 
