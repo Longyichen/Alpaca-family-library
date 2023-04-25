@@ -30,6 +30,7 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
     - [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
     - [Instruction Tuning with GPT-4](#instruction-tuning-with-gpt-4)
     - [DoctorGLM](#doctorglm)
+    - [Huatuo-Llama-Med-Chinese](#huatuo-llama-med-chinese)
     - [ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
   - [Models fine-tuned for different languages](#models-fine-tuned-for-different-languages)
     - [骆驼(Luotuo): Chinese-alpaca-lora](#骆驼luotuo-chinese-alpaca-lora)
