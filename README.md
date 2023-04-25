@@ -1,4 +1,4 @@
-# 1. Alpaca-family-library
+# Alpaca-family-library
 
 Summarize all low-cost replication methods for Chatgpt countiously. It is believed that with the improvement of data and model fine-tuning techniques, small models suitable for various segmented fields will continue to emerge and have better performance.
 
@@ -13,71 +13,71 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
 
 
 
-## 1.1. Catalogue
+## Catalogue
 
-- [1. Alpaca-family-library](#1-alpaca-family-library)
-  - [1.1. Catalogue](#11-catalogue)
-  - [1.2. Chat with Open Large Language Model](#12-chat-with-open-large-language-model)
-    - [1.2.1. Choose a model to chat with](#121-choose-a-model-to-chat-with)
-  - [1.3. What’s Alpaca](#13-whats-alpaca)
-  - [1.4. Models fine-tuned for application](#14-models-fine-tuned-for-application)
-    - [1.4.1. Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning](#141-alpaca-lora-low-rank-llama-instruct-tuning)
-    - [1.4.2. LLM-Adapters](#142-llm-adapters)
-    - [1.4.3. Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way](#143-wombat-️-from-rlhf-to-rrhf-aligning-human-preferences-in-a-right-way)
-    - [1.4.4. Dolly](#144-dolly)
-    - [1.4.5. Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#145-code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
-    - [1.4.6. Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)](#146-evolving-alpaca-an-empirical-study-on-instruction-tuning-for-large-language-models-alpaca-cot)
-    - [1.4.7. ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#147-chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
-    - [1.4.8. Instruction Tuning with GPT-4](#148-instruction-tuning-with-gpt-4)
-    - [1.4.9. DoctorGLM](#149-doctorglm)
-    - [1.4.10. ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#1410-chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
-  - [1.5. Models fine-tuned for different languages](#15-models-fine-tuned-for-different-languages)
-    - [1.5.1. 骆驼(Luotuo): Chinese-alpaca-lora](#151-骆驼luotuo-chinese-alpaca-lora)
-    - [1.5.2. KoAlpaca: Korean Alpaca Model based on Stanford Alpaca](#152-koalpaca-korean-alpaca-model-based-on-stanford-alpaca)
-    - [1.5.3. Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案](#153-chinese-vicuna-a-chinese-instruction-following-llama-based-model--一个中文低资源的llamalora方案)
-    - [1.5.4. Chinese LLaMA \& Alpaca 大模型](#154-chinese-llama--alpaca-大模型)
-    - [1.5.5. Japanese-Alpaca-LoRA](#155-japanese-alpaca-lora)
-    - [1.5.6. Baize](#156-baize)
-    - [1.5.7. Chinese-ChatLLaMA](#157-chinese-chatllama)
-    - [1.5.8. Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B](#158-guanaco-a-multilingual-instruction-following-language-model-based-on-llama-7b)
-  - [1.6. Models finetuned for Chat](#16-models-finetuned-for-chat)
-    - [1.6.1. Koala: A Dialogue Model for Academic Research](#161-koala-a-dialogue-model-for-academic-research)
-    - [1.6.2. FastChat](#162-fastchat)
-    - [1.6.3. ChatGLM-6B](#163-chatglm-6b)
-    - [1.6.4. OpenChatKit](#164-openchatkit)
-    - [1.6.5. Open Assistant](#165-open-assistant)
-    - [1.6.6. BELLE: BE Large Language model Engine](#166-belle-be-large-language-model-engine)
-    - [1.6.7. ChatYuan: Large Language Model for Dialogue in Chinese and English](#167-chatyuan-large-language-model-for-dialogue-in-chinese-and-english)
-    - [1.6.8. Firefly(流萤): 中文对话式大语言模型](#168-firefly流萤-中文对话式大语言模型)
-    - [1.6.9. GPT4All](#169-gpt4all)
-    - [1.6.10. ChatRWKV](#1610-chatrwkv)
-    - [1.6.11. InstructGLM](#1611-instructglm)
-    - [1.6.12. ChatGLM-finetune-LoRA](#1612-chatglm-finetune-lora)
-  - [1.7. Models fintuned for Multi-Modal Tasks](#17-models-fintuned-for-multi-modal-tasks)
-    - [1.7.1. LLaVA: Large Language and Vision Assistant](#171-llava-large-language-and-vision-assistant)
-    - [1.7.2. MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models](#172-minigpt-4-enhancing-vision-language-understanding-with-advanced-large-language-models)
-    - [1.7.3. VisualGPT](#173-visualgpt)
-    - [1.7.4. Interactive ChatCaptioner for image and video](#174-interactive-chatcaptioner-for-image-and-video)
-  - [1.8. Some Large Language Models Projects](#18-some-large-language-models-projects)
-    - [1.8.1. Flan-UL2](#181-flan-ul2)
-    - [1.8.2. CodeGeeX: A Multilingual Code Generation Model](#182-codegeex-a-multilingual-code-generation-model)
-    - [1.8.3. Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM](#183-llama-x-open-academic-research-on-improving-llama-to-sota-llm)
-    - [1.8.4. Blommz: Crosslingual Generalization through Multitask Finetuning](#184-blommz-crosslingual-generalization-through-multitask-finetuning)
-    - [1.8.5. Cerebras-GPT: A New Model For Open LLM Development](#185-cerebras-gpt-a-new-model-for-open-llm-development)
-    - [1.8.6. Pythia: Interpreting Autoregressive Transformers Across Time and Scale](#186-pythia-interpreting-autoregressive-transformers-across-time-and-scale)
-    - [1.8.7. GeoV](#187-geov)
-  - [1.9. Some Resources for Instruction Fine-tuning.](#19-some-resources-for-instruction-fine-tuning)
-    - [1.9.1. 🗂️ LlamaIndex 🦙 (GPT Index)](#191-️-llamaindex--gpt-index)
-    - [1.9.2. LMFlow](#192-lmflow)
-    - [1.9.3. Colossal-AI](#193-colossal-ai)
-    - [1.9.4. Language Model Evaluation Harness](#194-language-model-evaluation-harness)
-    - [1.9.5. alpaca\_chinese\_dataset](#195-alpaca_chinese_dataset)
-  - [1.10. Attachment](#110-attachment)
-  - [1.11. Contributors](#111-contributors)
+- [Alpaca-family-library](#alpaca-family-library)
+  - [Catalogue](#catalogue)
+  - [Chat with Open Large Language Model](#chat-with-open-large-language-model)
+    - [Choose a model to chat with](#choose-a-model-to-chat-with)
+  - [What’s Alpaca](#whats-alpaca)
+  - [Models fine-tuned for application](#models-fine-tuned-for-application)
+    - [Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning](#alpaca-lora-low-rank-llama-instruct-tuning)
+    - [LLM-Adapters](#llm-adapters)
+    - [Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way](#wombat-️-from-rlhf-to-rrhf-aligning-human-preferences-in-a-right-way)
+    - [Dolly](#dolly)
+    - [Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
+    - [Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)](#evolving-alpaca-an-empirical-study-on-instruction-tuning-for-large-language-models-alpaca-cot)
+    - [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
+    - [Instruction Tuning with GPT-4](#instruction-tuning-with-gpt-4)
+    - [DoctorGLM](#doctorglm)
+    - [ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
+  - [Models fine-tuned for different languages](#models-fine-tuned-for-different-languages)
+    - [骆驼(Luotuo): Chinese-alpaca-lora](#骆驼luotuo-chinese-alpaca-lora)
+    - [KoAlpaca: Korean Alpaca Model based on Stanford Alpaca](#koalpaca-korean-alpaca-model-based-on-stanford-alpaca)
+    - [Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案](#chinese-vicuna-a-chinese-instruction-following-llama-based-model--一个中文低资源的llamalora方案)
+    - [Chinese LLaMA \& Alpaca 大模型](#chinese-llama--alpaca-大模型)
+    - [Japanese-Alpaca-LoRA](#japanese-alpaca-lora)
+    - [Baize](#baize)
+    - [Chinese-ChatLLaMA](#chinese-chatllama)
+    - [Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B](#guanaco-a-multilingual-instruction-following-language-model-based-on-llama-7b)
+  - [Models finetuned for Chat](#models-finetuned-for-chat)
+    - [Koala: A Dialogue Model for Academic Research](#koala-a-dialogue-model-for-academic-research)
+    - [FastChat](#fastchat)
+    - [ChatGLM-6B](#chatglm-6b)
+    - [OpenChatKit](#openchatkit)
+    - [Open Assistant](#open-assistant)
+    - [BELLE: BE Large Language model Engine](#belle-be-large-language-model-engine)
+    - [ChatYuan: Large Language Model for Dialogue in Chinese and English](#chatyuan-large-language-model-for-dialogue-in-chinese-and-english)
+    - [Firefly(流萤): 中文对话式大语言模型](#firefly流萤-中文对话式大语言模型)
+    - [GPT4All](#gpt4all)
+    - [ChatRWKV](#chatrwkv)
+    - [InstructGLM](#instructglm)
+    - [ChatGLM-finetune-LoRA](#chatglm-finetune-lora)
+  - [Models fintuned for Multi-Modal Tasks](#models-fintuned-for-multi-modal-tasks)
+    - [LLaVA: Large Language and Vision Assistant](#llava-large-language-and-vision-assistant)
+    - [MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models](#minigpt-4-enhancing-vision-language-understanding-with-advanced-large-language-models)
+    - [VisualGPT](#visualgpt)
+    - [Interactive ChatCaptioner for image and video](#interactive-chatcaptioner-for-image-and-video)
+  - [Some Large Language Models Projects](#some-large-language-models-projects)
+    - [Flan-UL2](#flan-ul2)
+    - [CodeGeeX: A Multilingual Code Generation Model](#codegeex-a-multilingual-code-generation-model)
+    - [Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM](#llama-x-open-academic-research-on-improving-llama-to-sota-llm)
+    - [Blommz: Crosslingual Generalization through Multitask Finetuning](#blommz-crosslingual-generalization-through-multitask-finetuning)
+    - [Cerebras-GPT: A New Model For Open LLM Development](#cerebras-gpt-a-new-model-for-open-llm-development)
+    - [Pythia: Interpreting Autoregressive Transformers Across Time and Scale](#pythia-interpreting-autoregressive-transformers-across-time-and-scale)
+    - [GeoV](#geov)
+  - [Some Resources for Instruction Fine-tuning.](#some-resources-for-instruction-fine-tuning)
+    - [🗂️ LlamaIndex 🦙 (GPT Index)](#️-llamaindex--gpt-index)
+    - [LMFlow](#lmflow)
+    - [Colossal-AI](#colossal-ai)
+    - [Language Model Evaluation Harness](#language-model-evaluation-harness)
+    - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
+  - [Attachment](#attachment)
+  - [Contributors](#contributors)
 
 
 
-## 1.2. Chat with Open Large Language Model
+## Chat with Open Large Language Model
 
 In this website, you can try out many language models mentioned in this repository to conveniently compare their performance and choose the most suitable model for you!
 
@@ -87,7 +87,7 @@ Web:  https://chat.lmsys.org/
 - Koala: A Dialogue Model for Academic Research. [[Blog post\]](https://bair.berkeley.edu/blog/2023/04/03/koala/) [[GitHub\]](https://github.com/young-geng/EasyLM)
 - This demo server. [[GitHub\]](https://github.com/lm-sys/FastChat)
 
-### 1.2.1. Choose a model to chat with
+### Choose a model to chat with
 
 - [Vicuna](https://vicuna.lmsys.org/): a chat assistant fine-tuned from LLaMA on user-shared conversations. This one is expected to perform best according to our evaluation.
 - [Koala](https://bair.berkeley.edu/blog/2023/04/03/koala/): a chatbot fine-tuned from LLaMA on user-shared conversations and open-source datasets. This one performs similarly to Vicuna.
@@ -97,7 +97,7 @@ Web:  https://chat.lmsys.org/
 
 
 
-## 1.3. What’s Alpaca
+## What’s Alpaca
 
 Contains:  `Dataset`,`Data Genrating Code`, `Finetune Code`, `Web Demo`, `Benchmark`
 
@@ -139,13 +139,13 @@ Some applications:
 
   
 
-## 1.4. Models fine-tuned for application
+## Models fine-tuned for application
 
 A series of fine-tuned models derived from the Alpaca model. Some of them have publicly available weights, are fine-tuned for specific domains, and have better performance. These types of models are still being continuously developed.
 
 
 
-### 1.4.1. Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning
+### Alpaca-LoRA: Low-Rank LLaMA Instruct-Tuning
 
 Contains:  `Dataset`, `Data Genrating Code`, `Finetune Code`, `Model Weight`, `LoRA`
 
@@ -165,7 +165,7 @@ Some applications:
 
 
 
-### 1.4.2. LLM-Adapters
+### LLM-Adapters
 
 Contains:  `Dataset`, `Finetune Code`
 
@@ -183,7 +183,7 @@ The framework includes state-of-the-art open-access LLMs: LLaMa, OPT, BLOOM, and
 
 
 
-### 1.4.3. Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way
+### Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way
 
 Contains:   `Model Weight`, `Data Genrating Code`,`Dataset`, `Finetune Code`,  `Web Demo`
 
@@ -203,7 +203,7 @@ Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large
 
 
 
-### 1.4.4. Dolly
+### Dolly
 
 Contains: `Dataset`, `Model Weight`, `Finetune Code`, `Manual Annotation`
 
@@ -232,7 +232,7 @@ Databricks’ [Dolly](https://huggingface.co/databricks/dolly-v2-12b) is an inst
 
 
 
-### 1.4.5. Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions
+### Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions
 
 Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `Web Demo`
 
@@ -243,7 +243,7 @@ This is the repo for the Code Alpaca project, which aims to build and share an i
 
 
 
-### 1.4.6. Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)
+### Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)
 
 Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `LoRA`
 
@@ -256,7 +256,7 @@ This is the repository for the `Evolving Alpaca` project, which aims to extensiv
 
 
 
-### 1.4.7. [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070)
+### [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070)
 
 Contains:  `Dataset`,  `Finetune Code`, `Model Weight`,  `Web Demo`
 
@@ -272,7 +272,7 @@ This work collected more than 700 diseases and their corresponding symptoms, rec
 
 
 
-### 1.4.8. Instruction Tuning with GPT-4
+### Instruction Tuning with GPT-4
 
 Contains:  `Dataset`,  `Finetune Code`
 
@@ -288,7 +288,7 @@ This is the repo for the GPT-4-LLM, which aims to share data generated by GPT-4 
 
 
 
-### 1.4.9. DoctorGLM
+### DoctorGLM
 
 Contains:  `Dataset`,  `Finetune Code`,  `LoRA`,  `Model Weight`
 
@@ -302,7 +302,7 @@ finetune代码来自 https://github.com/ssbuild/chatglm_finetuning
 
 
 
-### 1.4.10. ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型
+### ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型
 
 Contains:  `Dataset`,  `LoRA`,  `Model Weight`
 
@@ -324,9 +324,9 @@ Contains:  `Dataset`,  `LoRA`,  `Model Weight`
 
 
 
-## 1.5. Models fine-tuned for different languages
+## Models fine-tuned for different languages
 
-### 1.5.1. 骆驼(Luotuo): Chinese-alpaca-lora
+### 骆驼(Luotuo): Chinese-alpaca-lora
 
 Contains: `Data Genrating Code`,  `Model Weight`, `LoRA`, `Benchmark`
 
@@ -339,7 +339,7 @@ A Chinese finetuned instruction LLaMA.
 
 
 
-### 1.5.2. KoAlpaca: Korean Alpaca Model based on Stanford Alpaca
+### KoAlpaca: Korean Alpaca Model based on Stanford Alpaca
 
 Contains:  `Dataset`, `Data Genrating Code`, `Finetune Code`, `Model Weight`, `LoRA`, `Benchmark`
 
@@ -355,7 +355,7 @@ Benchmark
 
   
 
-### 1.5.3. Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案
+### Chinese-Vicuna: A Chinese Instruction-following LLaMA-based Model —— 一个中文低资源的llama+lora方案
 
 Contains:  `Dataset`, `Data Genrating Code`, `Finetune Code`, `Model Weight`, `LoRA`, `Benchmark`
 
@@ -368,7 +368,7 @@ This is the repo for the Chinese-Vicuna project, which aims to build and share a
 
 
 
-### 1.5.4. Chinese LLaMA & Alpaca 大模型
+### Chinese LLaMA & Alpaca 大模型
 
 Contains:  `Model Weight`, `LoRA`,
 
@@ -387,7 +387,7 @@ Note: The following models cannot be used directly and must be reconstructed fol
 
 
 
-### 1.5.5. Japanese-Alpaca-LoRA
+### Japanese-Alpaca-LoRA
 
 Contains:  `Dataset`,  `Finetune Code`,  `LoRA`, 
 
@@ -397,7 +397,7 @@ A Japanese finetuned instruction LLaMA.
 
 
 
-### 1.5.6. Baize
+### Baize
 
 Contains:  `Dataset`,  `Finetune Code`,  `LoRA`, `Model Weight`,`Web Demo`
 
@@ -413,7 +413,7 @@ Baize is an open-source chat model fine-tuned with [LoRA](https://github.com/mic
 
 
 
-### 1.5.7. Chinese-ChatLLaMA
+### Chinese-ChatLLaMA
 
 Contains:  `Dataset`,  `Finetune Code`,  `Model Weight`
 
@@ -429,7 +429,7 @@ ChatLLaMA 支持简繁体中文、英文、日文等多语言。 LLaMA 在预训
 
 
 
-### 1.5.8. Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B
+### Guanaco: A Multilingual Instruction-Following Language Model Based on LLaMA 7B
 
 Contains:   `Model Weight`, `Dataset`, `Lora`
 
@@ -448,11 +448,11 @@ When using the Guanaco model, please note the following points:
 
 
 
-##  1.6. Models finetuned for Chat
+##  Models finetuned for Chat
 
 This type of model is mainly fine-tuned for dialogue tasks, so it has good conversation response capabilities.
 
-### 1.6.1. Koala: A Dialogue Model for Academic Research
+### Koala: A Dialogue Model for Academic Research
 
 Contains: `Dataset`, `Evalutaion`, `Finetune Code`, `Web Demo`
 
@@ -473,7 +473,7 @@ Koala, a chatbot trained by fine-tuning Meta’s [LLaMA](https://ai.facebook.com
 
 
 
-### 1.6.2. FastChat
+### FastChat
 
 Contains:   `Dataset`, `Finetune Code`,  `Web Demo`
 
@@ -488,7 +488,7 @@ Vicuna-13B, an open-source chatbot trained by fine-tuning LLaMA on user-shared c
 
 
 
-### 1.6.3. ChatGLM-6B
+### ChatGLM-6B
 
 Contains:   `Model Weight`, `Web Demo`
 
@@ -507,7 +507,7 @@ Some applications:
 
 
 
-### 1.6.4. OpenChatKit
+### OpenChatKit
 
 Contains:   `Model Weight`,  `Dataset`, `Finetune Code`, `Web Demo`
 
@@ -526,7 +526,7 @@ In this repo, you'll find code for:
 
 
 
-### 1.6.5. Open Assistant
+### Open Assistant
 
 Contains:   `Model Weight`,  `Dataset`,  `Web Demo`
 
@@ -540,7 +540,7 @@ We believe that by doing this we will create a revolution in innovation in langu
 
 
 
-### 1.6.6. BELLE: BE Large Language model Engine
+### BELLE: BE Large Language model Engine
 
 Contains:   `Model Weight`, `Data Genrating Code`,`Dataset`
 
@@ -556,7 +556,7 @@ The goal of this project is to promote the development of the open-source commun
 
 
 
-### 1.6.7. ChatYuan: Large Language Model for Dialogue in Chinese and English
+### ChatYuan: Large Language Model for Dialogue in Chinese and English
 
 Contains:   `Model Weight`, `Pretrain Code`,`Finetune Code`, `Web Demo`
 
@@ -573,7 +573,7 @@ ChatYuan-large-v2是ChatYuan系列中以轻量化实现高质量效果的模型�
 
 
 
-### 1.6.8. Firefly(流萤): 中文对话式大语言模型
+### Firefly(流萤): 中文对话式大语言模型
 
 Contains:   `Model Weight`, `Dataset`, `Finetune Code`, 
 
@@ -592,7 +592,7 @@ Contains:   `Model Weight`, `Dataset`, `Finetune Code`,
 
 
 
-### 1.6.9. GPT4All
+### GPT4All
 
 Contains:   `Model Weight`, `Dataset`,`LoRa`
 
@@ -605,7 +605,7 @@ Demo, data and code to train an assistant-style large language model with ~800k 
 
 
 
-### 1.6.10. ChatRWKV
+### ChatRWKV
 
 Contains:   `Model Weight`, `Dataset`, `Finetune Code`, `Web Demo`
 
@@ -618,7 +618,7 @@ ChatRWKV is like ChatGPT but powered by my RWKV (100% RNN) language model, which
 
 
 
-### 1.6.11. InstructGLM
+### InstructGLM
 
 Contains:   `Model Weight`, `Dataset`, `Finetune Code`, `Web Demo`
 
@@ -630,7 +630,7 @@ Contains:   `Model Weight`, `Dataset`, `Finetune Code`, `Web Demo`
 
 
 
-### 1.6.12. ChatGLM-finetune-LoRA
+### ChatGLM-finetune-LoRA
 
 Contains:   `Model Weight`, `Dataset`, `Finetune Code`
 
@@ -646,13 +646,13 @@ The minimum required GPU memory is **24G**, **RTX3090** is enough for training.
 
 
 
-## 1.7. Models fintuned for Multi-Modal Tasks
+## Models fintuned for Multi-Modal Tasks
 
 Multimodal models refer to the use of technologies such as prompt, adapter, and Lora to provide prompts or fine-tuning for large language models, enabling them to understand multimodal information such as images. Multimodal language models may have stronger capabilities, but research has also shown that multimodal fine-tuning can damage the performance of the language model itself.
 
 
 
-### 1.7.1. LLaVA: Large Language and Vision Assistant
+### LLaVA: Large Language and Vision Assistant
 
  Contains:  `Dataset`, `Finetune Code`, `Model Weight`, `Web Demo`
 
@@ -679,7 +679,7 @@ LLaVA represents a novel end-to-end trained large multimodal model that combines
 
 
 
-### 1.7.2. MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models
+### MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models
 
  Contains:  `Dataset`, `Finetune Code`, `Model Weight`, `Web Demo`
 
@@ -702,7 +702,7 @@ MiniGPT-4 yields many emerging vision-language capabilities similar to those dem
 
 
 
-### 1.7.3. VisualGPT
+### VisualGPT
 
  Contains:  `Dataset`, `Finetune Code`
 
@@ -717,7 +717,7 @@ The ability to quickly learn from a small quantity oftraining data widens the ra
 
 
 
-### 1.7.4. Interactive ChatCaptioner for image and video
+### Interactive ChatCaptioner for image and video
 
 Contains:  `Prompts`, 
 
@@ -737,7 +737,7 @@ Official repository of **ChatCaptioner** and **Video ChatCaptioner**.
 
 
 
-## 1.8. Some Large Language Models Projects
+## Some Large Language Models Projects
 
 Large language models provide powerful foundational capabilities for generative models and are also the basis for model fine-tuning. It is difficult to define what scale of language model can be considered a large language model, as the size of the model's parameters is related to the industry's hardware level (computing power). The scale of large models continues to evolve, and definitions are changing. In addition to OpenAI's GPT series available through an interface, this article lists some other excellent downloadable model weights for commonly used large language models.
 
@@ -745,7 +745,7 @@ Compared to the relatively closed usage of OpenAI's model, fine-tuning this type
 
 
 
-### 1.8.1. Flan-UL2
+### Flan-UL2
 
 Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
 
@@ -765,7 +765,7 @@ According to the original [blog](https://www.yitay.net/blog/flan-ul2-20b) here a
 
 ![model image](./assets/ul2.png)
 
-### 1.8.2. CodeGeeX: A Multilingual Code Generation Model
+### CodeGeeX: A Multilingual Code Generation Model
 
 Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
 
@@ -786,7 +786,7 @@ Some applications:
 
   
 
-### 1.8.3. Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
+### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
 
 - Github Page: https://github.com/AetherCortex/Llama-X
 
@@ -806,7 +806,7 @@ The project will follow these principles:
 
 ![Llama-X](./assets/pandallm.png)
 
-### 1.8.4. Blommz: Crosslingual Generalization through Multitask Finetuning
+### Blommz: Crosslingual Generalization through Multitask Finetuning
 
 Contains:   `Model Weights`,  `Dataset`,   `Finetune Code`, `Benchmark`
 
@@ -839,7 +839,7 @@ Multitask prompted finetuning (MTF) has been shown to help large language models
 
 
 
-### 1.8.5. Cerebras-GPT: A New Model For Open LLM Development
+### Cerebras-GPT: A New Model For Open LLM Development
 
 Contains:   `Model Weights`,   `Finetune Code`, `Benchmark`
 
@@ -854,7 +854,7 @@ The family includes 111M, 256M, 590M, 1.3B, 2.7B, 6.7B, and 13B models.
 
 
 
-### 1.8.6. [Pythia: Interpreting Autoregressive Transformers Across Time and Scale](https://arxiv.org/pdf/2304.01373.pdf)
+### [Pythia: Interpreting Autoregressive Transformers Across Time and Scale](https://arxiv.org/pdf/2304.01373.pdf)
 
 Contains:   `Model Weights`,   `Finetune Code`, `Benchmark`
 
@@ -869,7 +869,7 @@ How do large language models (LLMs) develop and evolve over the course of traini
 
 
 
-### 1.8.7. GeoV
+### GeoV
 
 Contains:   `Model Weights`,   `Bench Marl`
 
@@ -889,9 +889,9 @@ This implementation is built on top of [transformers](https://github.com/hugging
 
 
 
-## 1.9. Some Resources for Instruction Fine-tuning.
+## Some Resources for Instruction Fine-tuning.
 
-### 1.9.1. 🗂️ LlamaIndex 🦙 (GPT Index)
+### 🗂️ LlamaIndex 🦙 (GPT Index)
 
 LlamaIndex is a simple, flexible interface between your external data and LLMs. It provides the following tools in an easy-to-use fashion:
 
@@ -908,7 +908,7 @@ LlamaIndex is a simple, flexible interface between your external data and LLMs. 
 
 
 
-### 1.9.2. LMFlow
+### LMFlow
 
 An extensible, convenient, and efficient toolbox for finetuning large machine learning models, designed to be user-friendly, speedy and reliable, and accessible to the entire community.
 
@@ -919,7 +919,7 @@ An extensible, convenient, and efficient toolbox for finetuning large machine le
 
 
 
-### 1.9.3. Colossal-AI
+### Colossal-AI
 
 The success of Transformer models has pushed the deep learning model scale to billions of parameters. Due to the limited memory resource of a single GPU, However, the best practice for choosing the optimal parallel strategy is still lacking, since it requires domain expertise in both deep learning and parallel computing.
 The Colossal-AI system addressed the above challenge by introducing a unified interface to scale your sequential code of model training to distributed environments. It supports parallel training methods such as data, pipeline, tensor, and sequence parallelism, as well as heterogeneous training methods integrated with zero redundancy optimizer. Compared to the baseline system, Colossal-AI can achieve up to 2.76 times training speedup on large-scale models.
@@ -931,7 +931,7 @@ The Colossal-AI system addressed the above challenge by introducing a unified in
 
 
 
-### 1.9.4. Language Model Evaluation Harness
+### Language Model Evaluation Harness
 
 Github: https://github.com/EleutherAI/lm-evaluation-harness
 
@@ -946,7 +946,7 @@ Features:
 
 
 
-### 1.9.5. alpaca_chinese_dataset
+### alpaca_chinese_dataset
 
 人工精调的中文对话数据集和一段chatglm的微调代码
 
@@ -956,13 +956,13 @@ Features:
 
 
 
-## 1.10. Attachment
+## Attachment
 
 ![image-20230423110534258](./assets/image-20230423110534258.png)
 
 
 
-## 1.11. Contributors
+## Contributors
 
 [Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V)
 
