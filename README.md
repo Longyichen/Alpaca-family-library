@@ -7,7 +7,7 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
 **What's New！**
 
 - Edit Structure 2023/4/25
-- Add three new Motimodal models  2023/4/25
+- Add three new Mutimodal models  2023/4/25
 - Add Attachments 2023/4/25
 - Initial construction 2022/3/27
 
