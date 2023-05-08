@@ -169,7 +169,7 @@ Some applications:
 
 Contains:  `Dataset`, `Finetune Code`
 
-- Github Page: https://github.com/tloen/alpaca-lora 
+- Github Page: https://github.com/AGI-Edgerunners/LLM-Adapters
 - DataSet and Benchmark: https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main/dataset
 - Paper:  https://arxiv.org/abs/2304.01933
 
