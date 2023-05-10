@@ -1045,3 +1045,17 @@ We welcome everyone to promote this project, and we will continue our efforts to
 ## Contributors
 
 [Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V), [JianSen Qiao](https://github.com/QJSQJS)
+
+Cite this repo if you want to, or don't, both are fine.
+```
+@misc{Alpaca-family-library,
+  author = {Yilong Chen, Thewillman, Kevinzhang, Elucidator-V, JianSen Qiao},
+  title = {Alpaca-family-library: Classification and organization of open-source large models and related methods.},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/Longyichen/Alpaca-family-library}},
+}
+```
+
+Naturally, you should also cite the original LLaMA paper [1] and the Self-Instruct paper [2] and the [Stanford Alpaca repo](https://github.com/tatsu-lab/stanford_alpaca).
