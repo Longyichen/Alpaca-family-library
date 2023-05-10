@@ -6,6 +6,8 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
 
 **What's New！**
 
+- Add Code Models chapter！2023/5/10
+- Add Benchmark chapter! 2023/5/10
 - Edit Structure 2023/4/25
 - Add three new Mutimodal models  2023/4/25
 - Add Attachments 2023/4/25
@@ -25,7 +27,6 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
     - [LLM-Adapters](#llm-adapters)
     - [Wombat 🐻‍❄️: from RLHF to RRHF, Aligning Human Preferences in a 'Right' Way](#wombat-️-from-rlhf-to-rrhf-aligning-human-preferences-in-a-right-way)
     - [Dolly](#dolly)
-    - [Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
     - [Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)](#evolving-alpaca-an-empirical-study-on-instruction-tuning-for-large-language-models-alpaca-cot)
     - [ChatDoctor: A Medical Chat Model Fine-tuned on LLaMA Model using Medical Domain Knowledge](#chatdoctor-a-medical-chat-model-fine-tuned-on-llama-model-using-medical-domain-knowledge)
     - [Instruction Tuning with GPT-4](#instruction-tuning-with-gpt-4)
@@ -59,9 +60,11 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
     - [MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models](#minigpt-4-enhancing-vision-language-understanding-with-advanced-large-language-models)
     - [VisualGPT](#visualgpt)
     - [Interactive ChatCaptioner for image and video](#interactive-chatcaptioner-for-image-and-video)
+  - [Models for Code Generation](#models-for-code-generation)
+    - [CodeGeeX: A Multilingual Code Generation Model](#codegeex-a-multilingual-code-generation-model)
+    - [Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions](#code-alpaca-an-instruction-following-llama-model-trained-on-code-generation-instructions)
   - [Some Large Language Models Projects](#some-large-language-models-projects)
     - [Flan-UL2](#flan-ul2)
-    - [CodeGeeX: A Multilingual Code Generation Model](#codegeex-a-multilingual-code-generation-model)
     - [Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM](#llama-x-open-academic-research-on-improving-llama-to-sota-llm)
     - [Blommz: Crosslingual Generalization through Multitask Finetuning](#blommz-crosslingual-generalization-through-multitask-finetuning)
     - [Cerebras-GPT: A New Model For Open LLM Development](#cerebras-gpt-a-new-model-for-open-llm-development)
@@ -73,9 +76,13 @@ Welcome everyone to provide pull requests, and I will also regularly track the l
     - [Colossal-AI](#colossal-ai)
     - [Language Model Evaluation Harness](#language-model-evaluation-harness)
     - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
+  - [Model Evaluation Benchmark](#model-evaluation-benchmark)
+    - [SuperCLUE](#superclue)
+    - [LaMP: When Large Language Models Meet Personalization](#lamp-when-large-language-models-meet-personalization)
   - [Attachment](#attachment)
+  - [Next Step Plan](#next-step-plan)
+  - [Star Chart](#star-chart)
   - [Contributors](#contributors)
-
 
 ## Chat with Open Large Language Model
 
@@ -229,17 +236,6 @@ Databricks’ [Dolly](https://huggingface.co/databricks/dolly-v2-12b) is an inst
 +-----------------------------------+--------------+------------+--------------+-------------+-----------------+----------+----------+----------+
 
 ```
-
-
-
-### Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions
-
-Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `Web Demo`
-
-This is the repo for the Code Alpaca project, which aims to build and share an instruction-following LLaMA model for code generation. This repo is fully based on [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) ,and only changes the data used for training. Training approach is the same.
-
-- Github Page: https://github.com/sahil280114/codealpaca
-- Web Demo: https://code-alpaca-demo.vercel.app/
 
 
 
@@ -755,6 +751,42 @@ Official repository of **ChatCaptioner** and **Video ChatCaptioner**.
 
 ![demo1](./assets/demo1.gif)
 
+## Models for Code Generation
+
+Language models for code generation can be divided into two categories: code generation models fine-tuned by natural language models and code generation models pre-trained on code instruction data. Pre-trained code generation models have better performance. According to research, language models with the ability to generate code will have better instruction following, generalization, and thinking chain capabilities. From a productivity perspective, code generation models also have enormous potential to change the world and become an important foundation for new forms of human-machine interaction.
+
+
+
+### CodeGeeX: A Multilingual Code Generation Model
+
+Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
+
+CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
+
+- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
+- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
+- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
+- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
+
+- Github Page: https://github.com/THUDM/CodeGeeX 
+
+- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
+
+Some applications:
+
+- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
+
+
+
+### Code Alpaca: An Instruction-following LLaMA Model trained on code generation instructions
+
+Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `Web Demo`
+
+This is the repo for the Code Alpaca project, which aims to build and share an instruction-following LLaMA model for code generation. This repo is fully based on [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) ,and only changes the data used for training. Training approach is the same.
+
+- Github Page: https://github.com/sahil280114/codealpaca
+- Web Demo: https://code-alpaca-demo.vercel.app/
+
 
 
 ## Some Large Language Models Projects
@@ -785,26 +817,7 @@ According to the original [blog](https://www.yitay.net/blog/flan-ul2-20b) here a
 
 ![model image](./assets/ul2.png)
 
-### CodeGeeX: A Multilingual Code Generation Model
 
-Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `Benchmark`
-
-CodeGeeX, a large-scale multilingual code generation model with 13 billion parameters, pre-trained on a large code corpus of more than 20 programming languages. As of **June 22**, 2022, CodeGeeX has been trained on more than 850 billion tokens on a cluster of 1,536 [Ascend 910 AI Processors](https://e.huawei.com/en/products/servers/ascend). CodeGeeX has several unique features:
-
-- **Multilingual Code Generation**: CodeGeeX has good performance for generating executable programs in several mainstream programming languages, including Python, C++, Java, JavaScript, Go, etc. [DEMO](https://models.aminer.cn/codegeex)
-- **Crosslingual Code Translation**: CodeGeeX supports the translation of code snippets between different languages. Simply by one click, CodeGeeX can transform a program into any expected language with a high accuracy. [DEMO](https://models.aminer.cn/codegeex/codeTranslator)
-- **Customizable Programming Assistant**: CodeGeeX is available in the VS Code extension marketplace **for free**. It supports code completion, explanation, summarization and more, which empower users with a better coding experience. [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)
-- **Open-Source and Cross-Platform**: All codes and model weights are publicly available for research purposes. CodeGeeX supports both Ascend and NVIDIA platforms. It supports inference in a single Ascend 910, NVIDIA V100 or A100. [Apply Model Weights](https://models.aminer.cn/codegeex/download/request)
-
-- Github Page: https://github.com/THUDM/CodeGeeX 
-
-- Blog：https://models.aminer.cn/codegeex/blog/index_zh.html
-
-Some applications:
-
-- OneFlow Code: https://github.com/Oneflow-Inc/oneflow
-
-  
 
 ### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
 
@@ -976,11 +989,58 @@ Features:
 
 
 
+## Model Evaluation Benchmark
+
+With the increasing number of open source models, designing appropriate metrics to evaluate model performance has become an important issue. More and more evaluation metrics are being made public. This section summarizes benchmarks used for evaluating models.
+
+### SuperCLUE
+
+中文通用大模型综合性基准SuperCLUE
+
+SuperCLUE: A Benchmark for Foundation Models in Chinese
+
+- GitHub: https://github.com/CLUEbenchmark/SuperCLUE
+- Website: https://www.cluebenchmarks.com/
+
+![img](./assets/superclue.jpeg)
+
+中文通用大模型基准（SuperCLUE），是针对中文可用的通用大模型的一个测评基准。
+
+它主要回答的问题是：在当前通用大模型大力发展的背景下，中文大模型的效果情况，包括但不限于"这些模型不同任务的效果情况"、"相较于国际上的代表性模型做到了什么程度"、 "这些模型与人类的效果对比如何"。
+
+它尝试在一系列国内外代表性的模型上使用多个维度能力进行测试。SuperCLUE是中文语言理解测评基准（CLUE）在通用人工智能时代的进一步发展。
+
+![img](./assets/score.png)
+
+### LaMP: When Large Language Models Meet Personalization
+
+- GitHub: https://github.com/LaMP-Benchmark/LaMP
+- Website: https://lamp-benchmark.github.io/leaderboard
+
+This paper highlights the importance of personalization in the current state of natural language understanding and generation and introduces the LaMP benchmark --- a novel benchmark for training and evaluating language models for producing personalized outputs. LaMP offers a comprehensive evaluation framework with diverse language tasks and multiple entries for each user profile. It consists of seven personalized tasks, spanning across three classification and four text generation tasks. We further propose a retrieval augmentation approach that retrieves personalized items from user profiles to construct personalized prompts for large language models. The experiments conducted to establish fine-tuned and zero-shot baseline results for the benchmark conclude that LMs utilizing profile augmentation outperform their counterparts that do not factor in profile information.
+
+![image-20230510165528718](./assets/image-20230510165528718.png)
+
+
+
 ## Attachment
 
 ![image-20230423110534258](./assets/image-20230423110534258.png)
 
 
+
+## Next Step Plan
+
+1. Establish an embedding subdirectory to collect various embeddings and compare their performance.
+2. Establish a tool argument subdirectory to gather relevant practical work and frameworks for enhancing language models.
+3. Create a recommendation section to suggest currently popular and well-performing models to followers.
+4. Collect evaluation metrics for further comprehensive evaluations of multiple language models.
+
+We welcome everyone to promote this project, and we will continue our efforts to make it even better in the future!
+
+## Star Chart
+
+![Star History Chart](https://api.star-history.com/svg?repos=Longyichen/Alpaca-family-library&type=Date)
 
 ## Contributors
 
