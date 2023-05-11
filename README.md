@@ -4,8 +4,21 @@ Summarize all low-cost replication methods for Chatgpt countiously. It is believ
 
 Welcome everyone to provide pull requests, and I will also regularly track the latest developments in this repository！
 
+
+
+**How to make the most of this project: **
+
+This project provides a project card for each open source large model. The project card first summarizes the resources provided in the open source project, lists the resource addresses of the open source project, and introduces them briefly with a short paragraph and pictures. We provide tags for each project, using the search function of your browser to greatly improve your retrieval efficiency.
+
+You can check out new models added to this project through "Whats New" (they usually have better performance). You can also quickly find categories and their models through the directory. If you want to compare their effects more deeply by using them, please use "Chat with Open Large Language Model", or try extensively using the model's web demo.
+
+We cannot guarantee that all information provided is up-to-date (but we will do our best to update it), so we encourage you to click into the original repository of resources for verification. If you find any incorrect information about this project, please feel free to give us feedback at any time.
+
+
+
 **What's New！**
 
+- Add  introductions of powerful models: PaLM-rlhf-pytorch, OpenChatKitk, startCode, Panda, StableLM, VPGTrans 2023/5/11
 - Add Code Models chapter！2023/5/10
 - Add Benchmark chapter! 2023/5/10
 - Edit Structure 2023/4/25
@@ -239,6 +252,32 @@ Databricks’ [Dolly](https://huggingface.co/databricks/dolly-v2-12b) is an inst
 
 
 
+### StableLM: Stability AI Language Models
+
+Contains:  `Dataset`,   `Model Weight`, `Web Demo`
+
+- Github: https://github.com/Stability-AI/StableLM
+- Web Demo: https://huggingface.co/CarperAI
+- Hugging Face: https://huggingface.co/CarperAI
+
+This repository contains Stability AI's ongoing development of the StableLM series of language models and will be continuously updated with new checkpoints. The following provides an overview of all currently available models. More coming soon.
+
+#### StableVicuna
+
+StableVicuna is an RLHF fine-tune of [Vicuna-13B v0](https://huggingface.co/lmsys/vicuna-13b-delta-v0), which itself is a fine-tune of [LLaMA-13B](https://github.com/facebookresearch/llama). It is our attempt at creating an open-source RLHF LLM Chatbot. This model is developed by StabilityAI's CarperAI team, with [Duy V. Phung](https://github.com/PhungVanDuy) leading the training effort.
+
+Due to the original non-commercial license of LLaMA, we can only release the weights of our model as deltas over the original model's weights. StableVicuna's delta weights are released under ([CC BY-NC-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)).
+
+#### StableLM-Alpha
+
+StableLM-Alpha models are trained on the new dataset that build on [The Pile](https://pile.eleuther.ai/), which contains 1.5 trillion tokens, roughly 3x the size of The Pile. These models will be trained on up to 1.5 trillion tokens. The context length for these models is 4096 tokens.
+
+An upcoming technical report will document the model specifications and the training settings.
+
+As a proof-of-concept, we also fine-tuned the model with [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca)'s procedure using a combination of five recent datasets for conversational agents: Stanford's [Alpaca](https://github.com/tatsu-lab/stanford_alpaca), Nomic-AI's [gpt4all](https://github.com/nomic-ai/gpt4all), RyokoAI's [ShareGPT52K](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) datasets, Databricks labs' [Dolly](https://github.com/databrickslabs/dolly), and Anthropic's [HH](https://github.com/anthropics/hh-rlhf). We will be releasing these models as StableLM-Tuned-Alpha.
+
+
+
 ### Evolving Alpaca: An Empirical Study on Instruction Tuning for Large Language Models (**Alpaca-CoT**)
 
 Contains: `Dataset`, `Data Genrating Code`, `Finetune Code`, `LoRA`
@@ -464,6 +503,27 @@ When using the Guanaco model, please note the following points:
 
 
 
+### Panda: 海外中文开源大语言模型
+
+Contains:   `Model Weight`, `Finetune Code`, `Dataset`, `Benchmark`
+
+- Github: https://github.com/dandelionsllm/pandallm
+- Paper: https://arxiv.org/pdf/2305.03025
+
+欢迎来到我们的海外中文大语言模型开源项目—— Panda！Panda 系列语言模型目前基于 Llama-7B, -13B, -33B, -65B 进行中文领域上的持续预训练, 使用了接近 15M 条数据, 并针对推理能力在中文 benchmark 上进行了评测, 希望能够为中文自然语言处理领域提供具有泛用性的通用基础工具.
+
+我们的 Panda 模型以及训练涉及的中文数据集将以开源形式发布，任何人都可以免费使用并参与开发。我们欢迎来自全球的开发者一起参与到该项目中，共同推动中文自然语言处理技术的发展。我们后续会进一步完善针对中文语言模型基础能力的评测，同时开放更大规模的模型。
+
+| 模型名称           | 模型大小 | 下载链接                                                     |
+| ------------------ | -------- | ------------------------------------------------------------ |
+| Panda-7B           | 7B       | https://huggingface.co/chitanda/llama-panda-zh-7b-delta      |
+| Panda-Instruct-7B  | 7B       | https://huggingface.co/chitanda/llama-panda-zh-coig-7b-delta |
+| Panda-13B          | 13B      | https://huggingface.co/chitanda/llama-panda-zh-13b-delta     |
+| Panda-Instruct-13B | 13B      | Comming soon                                                 |
+| Flan-LLaMA-7B      | 7B       | https://huggingface.co/NTU-NLP-sg/flan-llama-7b-10m-delta    |
+
+
+
 ##  Models finetuned for Chat
 
 This type of model is mainly fine-tuned for dialogue tasks, so it has good conversation response capabilities.
@@ -662,9 +722,60 @@ The minimum required GPU memory is **24G**, **RTX3090** is enough for training.
 
 
 
+### OpenChatKit
+
+Contains:   `Model Weight`, `Dataset`, `Finetune Code`
+
+- Github: https://github.com/togethercomputer/OpenChatKit
+
+OpenChatKit provides a powerful, open-source base to create both specialized and general purpose chatbots for various applications. The kit includes an instruction-tuned language models, a moderation model, and an extensible retrieval system for including up-to-date responses from custom repositories. OpenChatKit models were trained on the OIG-43M training dataset, which was a collaboration between [Together](https://www.together.xyz/), [LAION](https://laion.ai/), and [Ontocord.ai](https://ontocord.ai/).
+
+In this repo, you'll find code for:
+
+- Training GPT-NeoXT-Chat-Base-20B, a 20B parameter chat model (see [docs/GPT-NeoXT-Chat-Base-20B.md](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md))
+- Training Pythia-Chat-Base-7B, a 7B parameter chat model
+- Testing inference using either of the chat models
+- Augmenting the model with additional context from a retrieval index
+
+
+
+### PaLM + RLHF - Pytorch (wip)
+
+Contains:    `Dataset`, `Finetune Code`
+
+- Github: https://github.com/lucidrains/PaLM-rlhf-pytorch
+
+Implementation of RLHF (Reinforcement Learning with Human Feedback) on top of the PaLM architecture. Maybe I'll add retrieval functionality too, à la [RETRO](https://github.com/lucidrains/RETRO-pytorch)
+
+It claims to be the first open-source ChatGPT platform project. Its basic idea is based on Google's language model PaLM architecture and uses reinforcement learning from human feedback (RLHF) methods. PaLM is a 540 billion parameter universal large-scale model released by Google in April this year, trained on the Pathways system. It can complete tasks such as coding, chatting, and language understanding, and has strong few-shot learning performance in most tasks.
+
+
+
 ## Models fintuned for Multi-Modal Tasks
 
 Multimodal models refer to the use of technologies such as prompt, adapter, and Lora to provide prompts or fine-tuning for large language models, enabling them to understand multimodal information such as images. Multimodal language models may have stronger capabilities, but research has also shown that multimodal fine-tuning can damage the performance of the language model itself.
+
+
+
+### VPGTrans: Transfer Visual Prompt Generator across LLMs
+
+ Contains:  `Dataset`, `Finetune Code`, `Model Weight`, `Web Demo`
+
+- GitHub Page: https://github.com/VPGTrans/VPGTrans
+- Paper: https://arxiv.org/pdf/2305.01278.pdf
+- Web Demo: https://vpgtrans.github.io/
+
+While developing a new vision-language LLM (VL-LLM) by pre-training on tremendous image-text pairs from scratch can be exceedingly resource-consuming, connecting an existing LLM with a comparatively lightweight visual prompt generator (VPG) becomes a feasible paradigm. However, further tuning the VPG part of the VL-LLM still suffers from indispensable computational costs.
+
+In this project, we develop a VPGTrans framework for transferring VPG across LLMs to build VL-LLMs at significantly lower cost. The GPU hours can be reduced over 10 times and the training data can be reduced to around 10%
+
+Customization of multimodal large models: Through our VPGTrans framework, various new large language models can be flexibly equipped with visual modules according to demand. For example, we have created VL-LLaMA and VL-Vicuna based on LLaMA-7B and Vicuna-7B.
+
+Open-source multimodal dialogue model: We have open-sourced VL-Vicuna, a class GPT4 multimodal dialogue model that can achieve high-quality multimodal conversations.
+
+![demo](./assets/VPGTrans.png)
+
+![demo](./assets/cost.png)
 
 
 
@@ -754,6 +865,21 @@ Official repository of **ChatCaptioner** and **Video ChatCaptioner**.
 ## Models for Code Generation
 
 Language models for code generation can be divided into two categories: code generation models fine-tuned by natural language models and code generation models pre-trained on code instruction data. Pre-trained code generation models have better performance. According to research, language models with the ability to generate code will have better instruction following, generalization, and thinking chain capabilities. From a productivity perspective, code generation models also have enormous potential to change the world and become an important foundation for new forms of human-machine interaction.
+
+
+
+### StarCoder
+
+Contains:   `Model Weights`, `Web Demo`,  `Finetune Code`, `DataSet`
+
+- Github：https://github.com/bigcode-project/starcoder 
+- Blog：https://www.bigcode-project.org/BigCodeProject 
+- Paper：https://drive.google.com/file/d/1cN-b9GnWtHzQRoE7M7gAEyivY0kl4BYs/view 
+- Web Demo：https://huggingface.co/spaces/bigcode/bigcode-playground
+
+💫 StarCoder is a language model (LM) trained on source code and natural language text. Its training data incorporates more that 80 different programming languages as well as text extracted from GitHub issues and commits and from notebooks. This repository showcases how we get an overview of this LM's capabilities.
+
+![图片](./assets/640.png)
 
 
 
