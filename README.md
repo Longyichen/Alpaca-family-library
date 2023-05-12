@@ -757,6 +757,45 @@ Implementation of RLHF (Reinforcement Learning with Human Feedback) on top of th
 
 It claims to be the first open-source ChatGPT platform project. Its basic idea is based on Google's language model PaLM architecture and uses reinforcement learning from human feedback (RLHF) methods. PaLM is a 540 billion parameter universal large-scale model released by Google in April this year, trained on the Pathways system. It can complete tasks such as coding, chatting, and language understanding, and has strong few-shot learning performance in most tasks.
 
+### MOSS
+
+Contains:   `Dataset`, `Model Weight`, `Web Demo`, `Finetune Code`
+
+MOSS 来自复旦大学自然语言处理实验室的**邱锡鹏教授团队**，MOSS是一个支持中英双语和多种插件的开源对话语言模型，`moss-moon`系列模型具有160亿参数，在FP16精度下可在单张A100/A800或两张3090显卡运行，在INT4/8精度下可在单张3090显卡运行。MOSS基座语言模型在约七千亿中英文以及代码单词上预训练得到，后续经过对话指令微调、插件增强学习和人类偏好训练具备多轮对话能力及使用多种插件的能力。
+
+- Github Page:https://github.com/OpenLMLab/MOSS
+
+<img src="./assets/MOSS.png" alt="img" style="zoom:70%;" />
+
+#### 开源清单
+
+##### 模型
+
+- [**moss-moon-003-base**](https://huggingface.co/fnlp/moss-moon-003-base): MOSS-003基座模型，在高质量中英文语料上自监督预训练得到，预训练语料包含约700B单词，计算量约6.67x1022次浮点数运算。
+- [**moss-moon-003-sft**](https://huggingface.co/fnlp/moss-moon-003-sft): 基座模型在约110万多轮对话数据上微调得到，具有指令遵循能力、多轮对话能力、规避有害请求能力。
+- [**moss-moon-003-sft-plugin**](https://huggingface.co/fnlp/moss-moon-003-sft-plugin): 基座模型在约110万多轮对话数据和约30万插件增强的多轮对话数据上微调得到，在`moss-moon-003-sft`基础上还具备使用搜索引擎、文生图、计算器、解方程等四种插件的能力。
+- [**moss-moon-003-sft-int4**](https://huggingface.co/fnlp/moss-moon-003-sft-int4/tree/main): 4bit量化版本的`moss-moon-003-sft`模型，约占用12GB显存即可进行推理。
+- [**moss-moon-003-sft-int8**](https://huggingface.co/fnlp/moss-moon-003-sft-int8): 8bit量化版本的`moss-moon-003-sft`模型，约占用24GB显存即可进行推理。
+- [**moss-moon-003-sft-plugin-int4**](https://huggingface.co/fnlp/moss-moon-003-sft-plugin-int4): 4bit量化版本的`moss-moon-003-sft-plugin`模型，约占用12GB显存即可进行推理。
+- [**moss-moon-003-sft-plugin-int8**](https://huggingface.co/fnlp/moss-moon-003-sft-plugin-int8): 8bit量化版本的`moss-moon-003-sft-plugin`模型，约占用24GB显存即可进行推理。
+- **moss-moon-003-pm**: 在基于`moss-moon-003-sft`收集到的偏好反馈数据上训练得到的偏好模型，将在近期开源。
+- **moss-moon-003**: 在`moss-moon-003-sft`基础上经过偏好模型`moss-moon-003-pm`训练得到的最终模型，具备更好的事实性和安全性以及更稳定的回复质量，将在近期开源。
+- **moss-moon-003-plugin**: 在`moss-moon-003-sft-plugin`基础上经过偏好模型`moss-moon-003-pm`训练得到的最终模型，具备更强的意图理解能力和插件使用能力，将在近期开源。
+
+##### 数据
+
+- [**moss-002-sft-data**](https://huggingface.co/datasets/fnlp/moss-002-sft-data): MOSS-002所使用的多轮对话数据，覆盖有用性、忠实性、无害性三个层面，包含由`text-davinci-003`生成的约57万条英文对话和59万条中文对话。
+- [**moss-003-sft-data**](https://github.com/OpenLMLab/MOSS/tree/main/SFT_data/conversations/conversation_without_plugins): `moss-moon-003-sft`所使用的多轮对话数据，基于MOSS-002内测阶段采集的约10万用户输入数据和`gpt-3.5-turbo`构造而成，相比`moss-002-sft-data`，`moss-003-sft-data`更加符合真实用户意图分布，包含更细粒度的有用性类别标记、更广泛的无害性数据和更长对话轮数，约含110万条对话数据。目前仅开源少量示例数据，完整数据将在近期开源。
+- [**moss-003-sft-plugin-data**](https://github.com/OpenLMLab/MOSS/tree/main/SFT_data/conversations/conversation_with_plugins): `moss-moon-003-sft-plugin`所使用的插件增强的多轮对话数据，包含支持搜索引擎、文生图、计算器、解方程等四个插件在内的约30万条多轮对话数据。目前仅开源少量示例数据，完整数据将在近期开源。
+- **moss-003-pm-data**: `moss-moon-003-pm`所使用的偏好数据，包含在约18万额外对话上下文数据及使用`moss-moon-003-sft`所产生的回复数据上构造得到的偏好对比数据，将在近期开源。
+
+##### 工程方案
+
+- [**MOSS Vortex**](https://github.com/OpenLMLab/MOSS_Vortex) - MOSS部署和推理方案
+- [**MOSS WebSearchTool**](https://github.com/OpenLMLab/MOSS_WebSearchTool) - MOSS搜索引擎插件部署方案
+- [**MOSS Frontend**](https://github.com/singularity-s0/MOSS_frontend) - 基于flutter实现的MOSS-003前端界面
+- [**MOSS Backend**](https://github.com/JingYiJun/MOSS_backend) - 基于Go实现的MOSS-003后端
+
 
 
 ## Models fintuned for Multi-Modal Tasks
