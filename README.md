@@ -18,6 +18,7 @@ We cannot guarantee that all information provided is up-to-date (but we will do 
 
 **What's New！**
 
+- Add  introductions of powerful models: MOSS, Chinese-Vicuna-medical, StackLLaMA, Linly, OpenLLaMA, Phoenix 2023/5/12
 - Add  introductions of powerful models: PaLM-rlhf-pytorch, OpenChatKitk, startCode, Panda, StableLM, VPGTrans 2023/5/11
 - Add Code Models chapter！2023/5/10
 - Add Benchmark chapter! 2023/5/10
@@ -49,6 +50,8 @@ We cannot guarantee that all information provided is up-to-date (but we will do 
     - [DoctorGLM](#doctorglm)
     - [Huatuo-Llama-Med-Chinese](#huatuo-llama-med-chinese)
     - [ChatGenTitle：使用百万arXiv论文信息在LLaMA模型上进行微调的论文题目生成模型](#chatgentitle使用百万arxiv论文信息在llama模型上进行微调的论文题目生成模型)
+    - [Chinese-Vicuna-medical](#chinese-vicuna-medical)
+    - [StackLLaMA: A hands-on guide to train LLaMA with RLHF](#stackllama-a-hands-on-guide-to-train-llama-with-rlhf)
   - [Models fine-tuned for different languages](#models-fine-tuned-for-different-languages)
     - [骆驼(Luotuo): Chinese-alpaca-lora](#骆驼luotuo-chinese-alpaca-lora)
     - [KoAlpaca: Korean Alpaca Model based on Stanford Alpaca](#koalpaca-korean-alpaca-model-based-on-stanford-alpaca)
@@ -74,6 +77,11 @@ We cannot guarantee that all information provided is up-to-date (but we will do 
     - [ChatGLM-finetune-LoRA](#chatglm-finetune-lora)
     - [OpenChatKit](#openchatkit-1)
     - [PaLM + RLHF - Pytorch (wip)](#palm--rlhf---pytorch-wip)
+    - [MOSS](#moss)
+      - [开源清单](#开源清单)
+        - [模型](#模型)
+        - [数据](#数据)
+        - [工程方案](#工程方案)
   - [Models fintuned for Multi-Modal Tasks](#models-fintuned-for-multi-modal-tasks)
     - [VPGTrans: Transfer Visual Prompt Generator across LLMs](#vpgtrans-transfer-visual-prompt-generator-across-llms)
     - [LLaVA: Large Language and Vision Assistant](#llava-large-language-and-vision-assistant)
@@ -91,6 +99,9 @@ We cannot guarantee that all information provided is up-to-date (but we will do 
     - [Cerebras-GPT: A New Model For Open LLM Development](#cerebras-gpt-a-new-model-for-open-llm-development)
     - [Pythia: Interpreting Autoregressive Transformers Across Time and Scale](#pythia-interpreting-autoregressive-transformers-across-time-and-scale)
     - [GeoV](#geov)
+    - [Linly](#linly)
+    - [OpenLLaMA: An Open Reproduction of LLaMA](#openllama-an-open-reproduction-of-llama)
+    - [Phoenix: Democratizing ChatGPT across Languages](#phoenix-democratizing-chatgpt-across-languages)
   - [Some Resources for Instruction Fine-tuning.](#some-resources-for-instruction-fine-tuning)
     - [🗂️ LlamaIndex 🦙 (GPT Index)](#️-llamaindex--gpt-index)
     - [LMFlow](#lmflow)
@@ -383,7 +394,50 @@ Contains:  `Dataset`,  `LoRA`,  `Model Weight`
 
 \3. 增强创造性和创新性：大模型使用了大量的训练数据，并能够从数据中提取规律，从而提供更多的词汇或句子组合方式，增强了生成论文题目的创造性和创新性；
 
-\4. 提高效率：相比传统的手动方式，使用大模型来生成论文题目可以极大地提高效率，不仅减少了需要写出标题的时间，同时也不容易产生显著的错误，提高了输出的质量。 
+\4. 提高效率：相比传统的手动方式，使用大模型来生成论文题目可以极大地提高效率，不仅减少了需要写出标题的时间，同时也不容易产生显著的错误，提高了输出的质量。
+
+
+
+### Chinese-Vicuna-medical
+
+Contains:  `Finetune Code`,  `Model Weight`
+
+- Github Page: https://github.com/WangRongsheng/ChatGenTitle
+
+在[cMedQA2](https://github.com/zhangsheng93/cMedQA2)上使用Chinese-Vicuna checkpoint-11600 进行微调
+
+目前从2个epoch的Vicuna开始continue finetune，效果比3个epoch的在医疗问答数据更具有专业性，同时由于数据集构建的问题，会更加规范，比如经常性的加上“到正规医院检查”等等
+
+- 同时验证了指令微调的有效性
+- 使用单指令continue-finetune能保留原来更多的性能
+
+
+
+分析了三种不同的微调方式:
+
+- 1、[无指令微调](https://github.com/Facico/Chinese-Vicuna/blob/master/docs/performance-medical.md#1无指令微调)
+- 2、[带指令微调](https://github.com/Facico/Chinese-Vicuna/blob/master/docs/performance-medical.md#2带指令微调)
+- 3、[固定单指令](https://github.com/Facico/Chinese-Vicuna/blob/master/docs/performance-medical.md#2带指令微调)
+
+我们将第三种微调方式相关的模型放到了huggingface上：
+
+- `Chinese-Vicuna/Chinese-Vicuna-continue-finetune-3.5epoch-cMedQA2`
+- `Chinese-Vicuna/Chinese-Vicuna-continue-finetune-7epoch-cMedQA2`
+
+
+
+### StackLLaMA: A hands-on guide to train LLaMA with RLHF
+
+Contains: `Finetune Code`, `Web Demo`
+
+- Blog：https://huggingface.co/blog/stackllama
+- Demo: https://huggingface.co/spaces/trl-lib/stack-llama
+
+![Logo](./assets/stackllama_logo.png)
+
+
+
+StackLLaMA是一个基于Meta的LLaMA模型的70亿参数语言模型，该模型使用TRL库使用来自人类反馈的强化学习（RLHF）对Stack Exchange的问题和答案对进行了训练。有关更多详细信息，请查看我们的博客文章。
 
 
 
@@ -1095,6 +1149,48 @@ This implementation is built on top of [transformers](https://github.com/hugging
 
 
 
+### Linly
+
+Contains:   `Model Weights`,  `Dataset`
+
+- GitHub Pages: https://github.com/CVI-SZU/Linly
+
+<img src="./assets/Linly.jpg" alt="Linly" style="zoom:50%;" />
+
+本项目向社区提供**中文对话模型 Linly-ChatFlow 、中文基础模型 Linly-Chinese-LLaMA 及其训练数据**。 模型基于 [TencentPretrain](https://github.com/Tencent/TencentPretrain)预训练框架实现，在 32 * A100 GPU 上全参数训练（Full-tuning）， 将陆续开放 7B、13B、33B、65B 规模的中文模型权重。 中文基础模型以 LLaMA 为底座，利用中文和中英平行增量预训练，将它在英文上强大语言能力迁移到中文上。进一步，项目汇总了目前公开的多语言指令数据，对中文模型进行了大规模指令跟随训练，实现了 Linly-ChatFlow 对话模型。
+
+此外，本项目还将公开从头训练的 **Linly-Chinese-OpenLLaMA** 模型，在 1TB 中英文语料预训练，针对中文优化使用字词结合tokenizer，模型将以 Apache 2.0 协议公开。
+
+
+
+### OpenLLaMA: An Open Reproduction of LLaMA
+
+Contains： `Model Weights`
+
+- GitHub Page：https://github.com/openlm-research/open_llama
+
+
+
+In this repo, we release a permissively licensed open source reproduction of Meta AI's [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) large language model. In this release, we're releasing a public preview of the 7B OpenLLaMA model that has been trained with 200 billion tokens. We provide PyTorch and Jax weights of pre-trained OpenLLaMA models, as well as evaluation results and comparison against the original LLaMA models. Stay tuned for our updates.
+
+
+
+### Phoenix: Democratizing ChatGPT across Languages
+
+Contains： `Model Weights`, `Benchmark`
+
+- GitHub Page：https://github.com/FreedomIntelligence/LLMZoo
+
+<img src="./assets/zoo.png" alt="Zoo" style="zoom:50%;" />
+
+
+
+We release a large language model ‘Phoenix’, achieving competitive performance among open-source English and Chinese models while excelling in languages with limited resources (covering both Latin and non-Latin languages). We believe this work will be beneficial to make ChatGPT more accessible, especially in countries where people cannot use ChatGPT due to restrictions from OpenAI or local goverments.
+
+LLM Zoo is a project that provides data, models, and evaluation benchmark for large language models.
+
+
+
 ## Some Resources for Instruction Fine-tuning.
 
 ### 🗂️ LlamaIndex 🦙 (GPT Index)
@@ -1217,12 +1313,12 @@ We welcome everyone to promote this project, and we will continue our efforts to
 
 ## Contributors
 
-[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V), [JianSen Qiao](https://github.com/QJSQJS)
+[Yichen](https://github.com/Longyichen) , [Thewillman](https://github.com/Thewillman), [Kevinzhang](https://github.com/kevinzhangcode), [Elucidator-V](https://github.com/Elucidator-V), [JianSen Qiao](https://github.com/QJSQJS), [Starry](https://github.com/ZhangZef)
 
 Cite this repo if you want to, or don't, both are fine.
 ```
 @misc{Alpaca-family-library,
-  author = {Yilong Chen, Thewillman, Kevinzhang, Elucidator-V, JianSen Qiao},
+  author = {Yilong Chen, Thewillman, Kevinzhang, Elucidator-V, JianSen Qiao, Starry},
   title = {Alpaca-family-library: Classification and organization of open-source large models and related methods.},
   year = {2023},
   publisher = {GitHub},
